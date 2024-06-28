@@ -1,4 +1,4 @@
-*{
+* {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
@@ -18,8 +18,8 @@ header {
 }
 
 header img {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
 }
 
 header a {
@@ -87,4 +87,44 @@ header h2 {
 
 .last-nav a:hover {
     background-color: #9c9c9c;
+}
+
+/* Styles for features section */
+.features {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    color: rgb(57, 57, 57);
+    font-size: 32px; /* Increased font size */
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.features ul li {
+    background-color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 18px;
+    transition: transform 0.3s ease; /* Added transition for hover animation */
+}
+
+.features ul li:hover {
+    transform: translateY(-5px); /* Move up 5px on hover */
+}
+
+.features ul li strong {
+    color: rgb(78, 79, 80);
+    margin-right: 5px;
 }

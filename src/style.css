@@ -118,7 +118,7 @@ header h2 {
     text-align: left;
     font-size: 18px;
     transition: transform 0.3s ease; /* Added transition for hover animation */
-    position: relative;
+    position: relative; /* Added position relative */
 }
 
 .features ul li:hover {
@@ -130,34 +130,54 @@ header h2 {
     margin-right: 5px;
 }
 
+/* Styles for Show more button */
 .show-more-btn {
     background-color: rgb(78, 79, 80);
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 8px 16px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
+    bottom: 10px;
+    right: 10px;
+    transform: translate(0, 50%);
 }
 
 .show-more-btn:hover {
     background-color: #9c9c9c;
 }
 
+/* Styles for feature content */
 .feature-content {
     display: none;
-    background-color: white;
     padding: 10px;
     margin-top: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, opacity 0.3s ease;
+    text-align: center; /* Centrare text */
+    font-style: italic;
 }
 
 .feature-content.expanded {
     display: block;
+}
+
+.feature-box {
+    position: relative;
+}
+
+/* Centering the feature content horizontally */
+.feature-box .feature-content {
+    position: relative; /* Revino la poziția relativă */
+    margin: 0 auto; /* Centrare orizontală */
+    width: 80%; /* Ajustează lățimea conținutului la nevoie */
+}
+
+.feature-content img {
+    display: block; /* Face imaginea un block element pentru a putea aplica margin: 0 auto; */
+    margin: 0 auto; /* Centrează imaginea pe orizontală */
+    max-width: 100%; /* Asigură că imaginea nu depășește lățimea containerului */
+    height: auto; /* Menține proporțiile imaginii */
 }

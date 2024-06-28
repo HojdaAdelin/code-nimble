@@ -37,7 +37,10 @@
                         <strong>Autocompletion:</strong> Autocomplete for keywords like IF, WHILE, FOR, etc. and symbols like "", '', (), [], {}.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Autocomplete feature details...
+                            <br>
+                            You need to type these keywords in textbox with CAPS and hit ENTER.<br>
+                            Here are all keywords: IF, WHILE, FOR, DO, CPP, INT, LONG, "", '', (), [], {}.<br>
+                            For INT & LONG will generate functions and CPP will generate CPP template in textbox.
                         </div>
                     </div>
                 </li>
@@ -47,7 +50,8 @@
                         <strong>File Management:</strong> Save and reopen files/folders with ease.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            File management feature details...
+                            <br>
+                            You can save a file/folder and it will open when you reopen the app -> File -> Save as default file/Save as default folder
                         </div>
                     </div>
                 </li>
@@ -57,7 +61,8 @@
                         <strong>Input & Output:</strong> Set input/output files and see the output directly in the app.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Input & Output feature details...
+                            <br>
+                            You can set 2 files for input & output e.g (input.in, output.out) and when you run the code the output will appear in the output textbox from the left panel.
                         </div>
                     </div>
                 </li>
@@ -67,7 +72,8 @@
                         <strong>Treeview:</strong> Displayed when opening a folder, useful for navigation.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Treeview feature details...
+                            <br>
+                            Very useful for any occasion. It will be displaied when you open a folder from File -> Open Folder in the left of the window.
                         </div>
                     </div>
                 </li>
@@ -77,7 +83,8 @@
                         <strong>Find & Replace:</strong> Fast find and replace functionality.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Find & Replace feature details...
+                            <br>
+                            <img src="img/find-replace.png">
                         </div>
                     </div>
                 </li>
@@ -87,7 +94,9 @@
                         <strong>Templates:</strong> Choose from various templates or create your own.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Templates feature details...
+                            <br>
+                            You can chose from a lot of templates: C++, C++ competitive, Java, C, HTML or you can create your own from Templates -> Create Template and use with Ctrl+Shift+T or with Templates -> Use Template.<br>
+                            These templates work like this: you select a template and a new tab will appear in the file tab with the template content
                         </div>
                     </div>
                 </li>
@@ -97,7 +106,8 @@
                         <strong>Run:</strong> Run C++ files directly from the app.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Run feature details...
+                            <br>
+                            You can run C++ files directly from the app by using Utility -> Run or with F5
                         </div>
                     </div>
                 </li>
@@ -107,7 +117,8 @@
                         <strong>Paint Mode:</strong> A built-in tool for creating schemes or drawings.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Paint Mode feature details...
+                            <br>
+                            You no longer need to open paint to make schemes or drawings because this tool will do all the work, you can use it from Utility -> Paint Mode or Ctrl+P and is like a Paint App
                         </div>
                     </div>
                 </li>
@@ -117,7 +128,11 @@
                         <strong>Local Server:</strong> Host or join a local server for collaborative coding.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            Local Server feature details...
+                            <br>
+                            Start Server -> you can host a server on you machine<br>
+                            Join Local Server -> you can join a server<br>
+                            Disconnect -> you can leave a server<br>
+                            Server Panel -> you can see the server members
                         </div>
                     </div>
                 </li>
@@ -127,7 +142,7 @@
                         <strong>C++ Support:</strong> Full support for C++ and partial support for Python with code suggestions and highlighting.
                         <button class="show-more-btn">Show more</button>
                         <div class="feature-content">
-                            C++ Support feature details...
+                            Nothing to show...
                         </div>
                     </div>
                 </li>
@@ -137,16 +152,25 @@
 
     <!-- Script for Show more functionality -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const showMoreButtons = document.querySelectorAll('.show-more-btn');
+        // Selectează toate butoanele "Show more"
+        const showMoreButtons = document.querySelectorAll('.show-more-btn');
 
-            showMoreButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const content = this.nextElementSibling;
-                    content.classList.toggle('expanded');
-                });
+        // Adaugă un listener pentru fiecare buton
+        showMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const content = this.nextElementSibling; // Selectează următorul element sibling
+
+                // Toggle clasa "expanded" pe "feature-content"
+                content.classList.toggle('expanded');
+
+                // Schimbă textul butonului între "Show more" și "Show less"
+                if (content.classList.contains('expanded')) {
+                    this.textContent = 'Show less';
+                } else {
+                    this.textContent = 'Show more';
+                }
             });
         });
-    </script>
+    </script>   
 </body>
 </html>

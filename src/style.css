@@ -118,6 +118,7 @@ header h2 {
     text-align: left;
     font-size: 18px;
     transition: transform 0.3s ease; /* Added transition for hover animation */
+    position: relative;
 }
 
 .features ul li:hover {
@@ -127,4 +128,36 @@ header h2 {
 .features ul li strong {
     color: rgb(78, 79, 80);
     margin-right: 5px;
+}
+
+.show-more-btn {
+    background-color: rgb(78, 79, 80);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.show-more-btn:hover {
+    background-color: #9c9c9c;
+}
+
+.feature-content {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.feature-content.expanded {
+    display: block;
 }

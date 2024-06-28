@@ -31,18 +31,122 @@
         <div class="features">
             <h2>Features</h2>
             <ul>
-                <li><strong>Autocompletion:</strong> Autocomplete for keywords like IF, WHILE, FOR, etc. and symbols like "", '', (), [], {}.</li>
-                <li><strong>File Management:</strong> Save and reopen files/folders with ease.</li>
-                <li><strong>Input & Output:</strong> Set input/output files and see the output directly in the app.</li>
-                <li><strong>Treeview:</strong> Displayed when opening a folder, useful for navigation.</li>
-                <li><strong>Find & Replace:</strong> Fast find and replace functionality.</li>
-                <li><strong>Templates:</strong> Choose from various templates or create your own.</li>
-                <li><strong>Run:</strong> Run C++ files directly from the app.</li>
-                <li><strong>Paint Mode:</strong> A built-in tool for creating schemes or drawings.</li>
-                <li><strong>Local Server:</strong> Host or join a local server for collaborative coding.</li>
-                <li><strong>C++ Support:</strong> Full support for C++ and partial support for Python with code suggestions and highlighting.</li>
+                <!-- Feature 1 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Autocompletion:</strong> Autocomplete for keywords like IF, WHILE, FOR, etc. and symbols like "", '', (), [], {}.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Autocomplete feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 2 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>File Management:</strong> Save and reopen files/folders with ease.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            File management feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 3 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Input & Output:</strong> Set input/output files and see the output directly in the app.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Input & Output feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 4 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Treeview:</strong> Displayed when opening a folder, useful for navigation.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Treeview feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 5 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Find & Replace:</strong> Fast find and replace functionality.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Find & Replace feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 6 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Templates:</strong> Choose from various templates or create your own.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Templates feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 7 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Run:</strong> Run C++ files directly from the app.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Run feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 8 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Paint Mode:</strong> A built-in tool for creating schemes or drawings.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Paint Mode feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 9 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>Local Server:</strong> Host or join a local server for collaborative coding.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            Local Server feature details...
+                        </div>
+                    </div>
+                </li>
+                <!-- Feature 10 -->
+                <li>
+                    <div class="feature-box">
+                        <strong>C++ Support:</strong> Full support for C++ and partial support for Python with code suggestions and highlighting.
+                        <button class="show-more-btn">Show more</button>
+                        <div class="feature-content">
+                            C++ Support feature details...
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </div>
+
+    <!-- Script for Show more functionality -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const showMoreButtons = document.querySelectorAll('.show-more-btn');
+
+            showMoreButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('expanded');
+                });
+            });
+        });
+    </script>
 </body>
 </html>

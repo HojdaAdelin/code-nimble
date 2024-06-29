@@ -6,12 +6,12 @@
     <meta name="description" content="Code Nimble - the next generation code editor for competitive programming.">
     <meta name="author" content="HojdaAdelin">
     <link rel="stylesheet" href="style.css">
-    <title>Code Nimble</title>
+    <title>Code Nimble - Blogs</title>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <a href="/index.html">Code Nimble</a>
+            <a href="../index.html">Code Nimble</a>
         </div>
         <nav>
             <a href="docs.html">Docs</a>
@@ -19,6 +19,68 @@
             <a href="download.html">Download</a>
         </nav>
     </header>
-    <div class="container"></div>
+
+    <div class="blog-section">
+        <div class="blog-titles">
+            <h2>Blogs</h2>
+            <p onclick="showBlogContent('Version 1.5')">Version 1.5</p>
+        </div>
+        <div class="blog-content">
+            <article id="Version 1.5" class="active">
+                <h1>Version 1.5</h1>
+                <h2>Added:</h2>
+                <p>- Paint Mode<br>
+                    - Integrate paint window in app<br>
+                    - Change colors in paint mode<br>
+                    - Local Server<br>
+                    - Profile<br>
+                    - Changed treeview arrow<br>
+                    - Server Panel<br>
+                    - Connected users list in panel<br>
+                    - Autocomplete for CPP when ENTER<br>
+                    - Button 2 bind in file tab<br>
+                    - Tabs in paint mode<br>
+                    - Text highlighted for python<br>
+                    - Autocomplete \", \', \*<br>
+                    - Settings<br>
+                    - Settings for status bar<br>
+                    - Added CHANGELOG.md<br>
+                    - Timer in status bar<br>
+                    - Added "*" in file tab when the file is modified<br>
+                    - Now you can run the textbox content(you don't need to save the file everytime)<br>
+                    - File tab pack forget when there aren't any tabs<br>
+                    - New theme system with json files<br>
+                    - When suggestion is mapped and hit ENTER will autocomplete code<br>
+                    - Ocean theme<br>
+                    - Update text highlighted<br>
+                    - BUILD.md<br>
+                    - CONTRIBUTION.md</p>
+                    <h2>Fixed:</h2>
+                    <p>- Fixed autocompletion when list isn't mapped<br>
+                        - Fixed Ctrl+Backspace<br>
+                        - Fixded save<br>
+                        - Input & Output won't be displayed when populate treeview <br>
+                        - Redraw textbox after find & replace</p>
+            </article>
+            
+        </div>
+    </div>
+
+    <script>
+        function showBlogContent(blogId) {
+            // Obține toate articolele și le ascunde
+            let articles = document.querySelectorAll('.blog-content article');
+            articles.forEach(article => {
+                article.classList.remove('active');
+            });
+
+            // Afișează doar articolul dorit
+            let selectedArticle = document.getElementById(blogId);
+            if (selectedArticle) {
+                selectedArticle.classList.add('active');
+            }
+        }
+    </script>
+
 </body>
 </html>

@@ -272,3 +272,75 @@ header nav a:hover {
 .download-button:hover {
     background-color: #45a049;
 }
+
+.blog-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.blog-titles {
+    flex: 1;
+    max-width: 30%;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+    overflow-y: auto; /* Permite scrolling dacă titlurile depășesc înălțimea disponibilă */
+    text-align: center; /* Aduce textul în centru */
+}
+
+.blog-titles h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+.blog-titles p {
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: left; /* Aliniază textul la stânga */
+}
+.blog-titles p:hover {
+    color: #a2a2a2;
+}
+.blog-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; /* Permite scrolling pentru conținutul articolelor */
+}
+
+/* Stil pentru articolele de blog */
+.blog-content article {
+    display: none;
+}
+
+.blog-content article.active {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Stil pentru linkuri în interiorul articolelor */
+.blog-content article a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-content article a:hover {
+    text-decoration: underline;
+}
+
+.blog-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.blog-content h2 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.blog-content p {
+    font-size: 24px;
+}

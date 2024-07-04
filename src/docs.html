@@ -19,6 +19,36 @@
             <a href="download.html">Download</a>
         </nav>
     </header>
+
+    <div class="blog-section">
+        <div class="blog-titles">
+            <h2>Blogs</h2>
+            <p onclick="showBlogContent('Soon...')">Soon...</p>
+        </div>
+        <div class="blog-content">
+            <article id="Soon..." class="active">
+                <h1>Soon...</h1>
+                
+            </article>
+            
+        </div>
+    </div>
+
+    <script>
+        function showBlogContent(blogId) {
+            // Obține toate articolele și le ascunde
+            let articles = document.querySelectorAll('.blog-content article');
+            articles.forEach(article => {
+                article.classList.remove('active');
+            });
+
+            // Afișează doar articolul dorit
+            let selectedArticle = document.getElementById(blogId);
+            if (selectedArticle) {
+                selectedArticle.classList.add('active');
+            }
+        }
+    </script>
     
 </body>
 </html>

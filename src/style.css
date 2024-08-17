@@ -1,346 +1,198 @@
-* {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+body, html {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: #0a192f;
+    color: #d1e8ff;
 }
-
-::selection {
-    background-color: #909090;
-}
-
 header {
-    height: 80px;
-    width: 100%;
-    background: linear-gradient(135deg, #3a3a3a, #b3b3b3); /* Gradient gri */
+    background: linear-gradient(to right, #172a45, #0a192f);
+    padding: 20px 40px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: space-between; /* Spațiere egală între elementele header-ului */
-    padding: 0 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Umbra */
-    border-bottom: 2px solid #6e6e6e;
-    box-sizing: border-box; /* Asigură-te că padding-ul este inclus în lățime */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
-header .logo-container {
-    position: relative; /* Revino la poziția relativă */
+header img {
+    height: 40px;
 }
-
-header .logo-container a {
+nav a {
+    color: #d1e8ff;
     text-decoration: none;
-    color: white;
-    font-size: 28px; /* Dimensiune mai mare pentru nume */
+    margin: 0 15px;
     font-weight: bold;
-    letter-spacing: 2px; /* Spațiere între litere */
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Umbra pentru text */
-    transition: color 0.3s ease; /* Tranziție pentru schimbarea culorii la hover */
+    transition: color 0.3s;
 }
-
-header .logo-container a:hover {
-    color: #c1c1c1; /* Schimbă culoarea textului la hover */
+nav a:hover {
+    color: #00aaff;
 }
-
-header nav {
-    display: flex;
-    align-items: center; /* Adu link-urile pe aceeași linie verticală */
-}
-
-header nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 16px; /* Ajustare font-size pentru a se încadra în lățime */
-    padding: 10px 20px; /* Ajustare padding pentru a mări suprafața de click */
-    margin-left: 10px; /* Spațiu între link-uri */
-    border-radius: 20px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background: rgba(0, 0, 0, 0.2); /* Fundal semi-transparent pentru link-uri */
-}
-
-header nav a:first-child {
-    margin-left: 0; /* Elimină spațiul pentru primul link */
-}
-
-header nav a:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Fundal semi-transparent mai deschis la hover */
-}
-
-
-.container {
-    width: 100%;
-    background-color: white;
-    padding-top: 10px;
-    text-align: center;
-}
-
-.container h1 {
-    color: rgb(57, 57, 57);
-}
-
-.center-container {
+.section1 {
+    height: 80vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
+    background: linear-gradient(to bottom, #0a192f, #112240);
+    text-align: center;
+    padding: 0 20px;
+}
+.section1 h1 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    color: #00aaff;
+}
+.section1 img {
+    max-width: 80%;
+    height: 50vh;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.section1 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #cbd5e0;
+}
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+.buttons a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.buttons .download {
+    background-color: #007bff;
+}
+.buttons .source-code {
+    background-color: #555;
+}
+.section2 {
+    padding: 60px 40px;
+    background: linear-gradient(to bottom, #112240, #0a192f);
+}
+.section2 h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #00aaff;
+}
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+.card {
+    background-color: #172a45;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     padding: 20px;
-    background: linear-gradient(135deg, #6e6e6e, #d4d4d4); /* Gradient gri */
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    margin: 20px; 
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+.card img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #00aaff;
+}
+.card p {
+    font-size: 16px;
+    color: #cbd5e0;
+}
+.section3, .section4 {
+    padding: 60px 40px;
+    background: linear-gradient(to bottom, #0a192f, #112240);
     text-align: center;
 }
-
-.center-container h1 {
-    color: white;
-    font-size: 30px;
+.section3 h2, .section4 h2 {
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #00aaff;
 }
-
-.center-container p {
+.section3 p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #cbd5e0;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+    line-height: 1.5;
+}
+.section3 .button {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
     color: white;
+    background-color: #007bff;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+.section3 .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+.section4 .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.section4 .buttons a {
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #007bff;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.section4 .buttons a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+footer {
+    background-color: #172a45;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+footer .icons a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
     font-size: 20px;
 }
-
-.center-container img {
-    width: 100%;
-    max-width: 600px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.last-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-.last-nav a {
-    text-decoration: none;
-    background-color: #8c8c8c; /* Background gri pentru butoane */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.last-nav a:hover {
-    background-color: #b3b3b3; /* Culoare de hover pentru butoane */
-    color: #6e6e6e;
-}
-
-/* Styles for features section */
-.features {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-top: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.features h2 {
-    color: rgb(57, 57, 57);
-    font-size: 32px; /* Increased font size */
-    margin-bottom: 20px;
-}
-
-.features ul {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.features ul li {
-    background-color: white;
-    padding: 15px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: left;
-    font-size: 18px;
-    transition: transform 0.3s ease; /* Added transition for hover animation */
-    position: relative; /* Added position relative */
-}
-
-.features ul li:hover {
-    transform: translateY(-5px); /* Move up 5px on hover */
-}
-
-.features ul li strong {
-    color: rgb(78, 79, 80);
-    margin-right: 5px;
-}
-
-/* Styles for Show more button */
-.show-more-btn {
-    background-color: rgb(78, 79, 80);
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    transform: translate(0, 50%);
-}
-
-.show-more-btn:hover {
-    background-color: #9c9c9c;
-}
-
-/* Styles for feature content */
-.feature-content {
-    display: none;
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 5px;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    text-align: center; /* Centrare text */
-    font-style: italic;
-}
-
-.feature-content.expanded {
-    display: block;
-}
-
-.feature-box {
-    position: relative;
-}
-
-/* Centering the feature content horizontally */
-.feature-box .feature-content {
-    position: relative; /* Revino la poziția relativă */
-    margin: 0 auto; /* Centrare orizontală */
-    width: 80%; /* Ajustează lățimea conținutului la nevoie */
-}
-
-.feature-content img {
-    display: block; /* Face imaginea un block element pentru a putea aplica margin: 0 auto; */
-    margin: 0 auto; /* Centrează imaginea pe orizontală */
-    max-width: 100%; /* Asigură că imaginea nu depășește lățimea containerului */
-    height: auto; /* Menține proporțiile imaginii */
-}
-
-.container-download {
-    background-color: white;
-    padding-top: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.download-section {
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.app-image {
-    width: 700px;
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 10px;
-}
-
-.download-details {
-    text-align: center;
-}
-
-.download-details h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.current-version {
-    font-size: 18px;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.download-button {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.download-button:hover {
-    background-color: #45a049;
-}
-
-.blog-section {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-
-.blog-titles {
-    flex: 1;
-    max-width: 30%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-right: 1px solid #ddd;
-    overflow-y: auto; /* Permite scrolling dacă titlurile depășesc înălțimea disponibilă */
-    text-align: center; /* Aduce textul în centru */
-}
-
-.blog-titles h2 {
-    margin-bottom: 20px;
-    font-size: 28px;
-}
-
-.blog-titles p {
-    font-size: 24px;
-    cursor: pointer;
-    margin-bottom: 10px;
-    text-align: left; /* Aliniază textul la stânga */
-}
-.blog-titles p:hover {
-    color: #a2a2a2;
-}
-.blog-content {
-    flex: 1;
-    padding: 20px;
-    overflow-y: auto; /* Permite scrolling pentru conținutul articolelor */
-}
-
-/* Stil pentru articolele de blog */
-.blog-content article {
-    display: none;
-}
-
-.blog-content article.active {
-    display: block;
-    margin-bottom: 20px;
-}
-
-/* Stil pentru linkuri în interiorul articolelor */
-.blog-content article a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.blog-content article a:hover {
-    text-decoration: underline;
-}
-
-.blog-content h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.blog-content h2 {
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
-.blog-content p {
-    font-size: 24px;
+footer .icons a:hover {
+    color: #00aaff;
 }

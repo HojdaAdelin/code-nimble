@@ -700,6 +700,86 @@ footer {
     margin-bottom: 20px;
 }
 
+/* Docs Section */
+.docs-section {
+    padding: 80px 20px;
+    background-color: #1a1a2e;
+    color: #fff;
+}
+
+.docs-container {
+    display: flex;
+    gap: 20px;
+}
+
+.docs-sidebar {
+    width: 25%;
+    background-color: #0f0f3a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.docs-sidebar h2 {
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
+
+.docs-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.docs-sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.docs-sidebar ul li a {
+    color: #00d4ff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.docs-sidebar ul li a:hover, .docs-sidebar ul li a.active {
+    background-color: #00d4ff;
+    color: #0f0f3a;
+}
+
+.docs-content {
+    width: 75%;
+    background-color: #0b0c2a;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.doc-section {
+    display: none;
+}
+
+.doc-section.active {
+    display: block;
+}
+
+.doc-section h2 {
+    color: #00d4ff;
+    margin-bottom: 20px;
+}
+
+.doc-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: #bbb;
+}
+
+.doc-section pre {
+    background-color: #1a1a2e;
+    color: #00d4ff;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
 
 /* Responsive Design for Mobile */
 @media (max-width: 768px) {
@@ -748,6 +828,17 @@ footer {
     .resources-column {
         max-width: 100%;
         margin-bottom: 20px;
+    }
+    .docs-container {
+        flex-direction: column;
+    }
+
+    .docs-sidebar {
+        width: 100%;
+    }
+
+    .docs-content {
+        width: 100%;
     }
 }
 

@@ -1,24 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code Nimble - the next generation code editor for competitive programming.">
-    <meta name="author" content="HojdaAdelin">
+    <title>Download - Code Nimble</title>
     <link rel="stylesheet" href="style.css">
-    <title>Code Nimble</title>
 </head>
 <body>
+
+    <!-- Include the same header -->
     <header>
-        <div class="logo-container">
-            <a href="../index.html">Code Nimble</a>
+        <div class="logo">
+            <img src="/img/png-logo.png" alt="Code Nimble Logo">
         </div>
         <nav>
-            <a href="docs.html">Docs</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="download.html">Download</a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Lab</a></li>
+            </ul>
         </nav>
     </header>
+
+    <section class="docs-section">
+        <div class="docs-container">
+            <!-- Sidebar Navigation -->
+            <aside class="docs-sidebar">
+                <h2>Documentation</h2>
+                <ul>
+                    <li><a href="#" data-doc="getting-started" class="active">Getting Started</a></li>
+                    <li><a href="#" data-doc="config">Configuration</a></li>
+                    <li><a href="#" data-doc="languages">Supported Languages</a></li>
+                    <li><a href="#" data-doc="key-features">Key Features</a></li>
+                    <li><a href="#" data-doc="themes">Themes & Customization</a></li>
+                </ul>
+            </aside>
+    
+            <!-- Main Content -->
+            <div class="docs-content">
+                <div id="getting-started" class="doc-section active">
+                    <h2>Getting Started</h2>
+                    <p>Welcome to Code Nimble, the ultimate code editor for competitive programming. Here's a guide to help you get started with the app:</p>
+                    <ul>
+                        <li>Download and install the latest version of Code Nimble.</li>
+                        <li>Set up your environment for the languages you want to code in (C++, Python, Java).</li>
+                        <li>Configure your preferred settings like themes, file handling, and autocomplete.</li>
+                        <li>Start coding and submit your solutions directly from the app using the integrated features.</li>
+                    </ul>
+                </div>
+    
+                <div id="config" class="doc-section">
+                    <h2>Configuration</h2>
+                    <p>To get the best experience with Code Nimble, configure the following settings:</p>
+                    <ul>
+                        <li><b>C++:</b> Install `g++` compiler and add its path in env.</li>
+                        <li><b>Python:</b> Make sure Python 3.x is installed and specified in the env path.</li>
+                        <li><b>Theme:</b> Choose from the available themes or create your own JSON-based theme.</li>
+                    </ul>
+                </div>
+    
+                <div id="languages" class="doc-section">
+                    <h2>Supported Languages</h2>
+                    <p>Code Nimble currently supports the following programming languages:</p>
+                    <ul>
+                        <li>C++ - full support</li>
+                        <li>Python - full support</li>
+                        <li>Java - only template</li>
+                        <li>HTML/CSS - only template</li>
+                    </ul>
+                    <p>Additional languages may be added in future updates.</p>
+                </div>
+    
+                <div id="key-features" class="doc-section">
+                    <h2>Key Features</h2>
+                    <ul>
+                        <li><b>Code Autocomplete:</b> Supports intelligent autocompletion for C++, Python, and Java.</li>
+                        <li><b>Test Case Fetching:</b> Fetch test cases from competitive platforms with a single click.</li>
+                        <li><b>Profile Management:</b> Switch between coding environments easily.</li>
+                        <li><b>Real-Time Collaboration:</b> Use the local server feature for live collaboration.</li>
+                        <li><b>Paint Window:</b> Integrated sketch tool for quick notes and drawings.</li>
+                    </ul>
+                </div>
+    
+                <div id="themes" class="doc-section">
+                    <h2>Themes & Customization</h2>
+                    <p>Code Nimble allows you to customize the look and feel of the editor through themes. You can use predefined themes or create your own.</p>
+                    <pre>
+    {
+        "background_color": "#333333",
+        "treeview_background": "#333333",
+        "text_color": "#ffffff",
+        "button_color": "#555555",
+        "button_hover_color": "#777777",
+        "border_color": "#444444",           
+        "item_hover_background_color": "#555555", 
+        "item_hover_text_color": "#ffffff",  
+        "separator_color": "#444444",
+        "highlight_color": "#555555",
+        "line_number_background": "#454545",
+        "line_number_text_color": "#bfbfbf",
+        "editor_background": "#454545",
+        "editor_foreground": "#ffffff",
+        "selection_background_color": "#333333",
+        "status_bar_background": "#333333",
+        "ctn_words": "#444444",
+            
+        "keyword_color": "#C678DD",
+        "string_color": "#98C379",
+        "comment_color": "#717a8a",
+        "include_color": "#717a8a", 
+        "parenthesis_color": "#e06c75",
+        "number_color": "#d19a66",
+        "symbol_color": "#56b6c2"
+    }
+                    </pre>
+                    <p>Save your theme as a `.json` file and load it through the theme changer menu.</p>
+                </div>
+    
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the same footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/img/png-logo.png" alt="Code Nimble Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Lab</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="/img/github.png" alt="GitHub"></a>
+                <a href="#"><img src="/img/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelectorAll('.docs-sidebar a').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                const docId = this.getAttribute('data-doc');
+    
+                // Remove active class from all links
+                document.querySelectorAll('.docs-sidebar a').forEach(link => link.classList.remove('active'));
+    
+                // Add active class to clicked link
+                this.classList.add('active');
+    
+                // Hide all sections
+                document.querySelectorAll('.doc-section').forEach(section => section.classList.remove('active'));
+    
+                // Show the selected section
+                document.getElementById(docId).classList.add('active');
+            });
+        });
+    </script>    
     
 </body>
 </html>

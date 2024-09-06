@@ -1,103 +1,183 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code Nimble - the next generation code editor for competitive programming.">
-    <meta name="author" content="HojdaAdelin">
-    <link rel="stylesheet" href="src/style.css">
     <title>Code Nimble</title>
+    <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
     <header>
-        <img src="img/png-logo.png" alt="Code Nimble Logo">
+        <div class="logo">
+            <img src="img/png-logo.png" alt="Code Nimble Logo">
+        </div>
         <nav>
-            <a href="#">Download</a>
-            <a href="#">Resources</a>
-            <a href="#">Docs</a>
-            <a href="src/blogs.html">Blogs</a>
-            <a href="#">FAQ</a>
-            <a href="#">Lab</a>
+            <ul class="nav-links">
+                <li><a href="#">Download</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Lab</a></li>
+            </ul>
         </nav>
     </header>
-    <section class="section1">
-        <h1>The next generation code editor for Competitive Programming</h1>
-        <img src="img/app.png" alt="Code Editor Image">
-        <p>Experience the cutting-edge features designed to enhance your competitive programming skills.<br> Join our community to stay updated with the latest trends and tips in coding.</p>
-        <div class="buttons">
-            <a href="#" class="download">Download</a>
-            <a href="https://github.com/HojdaAdelin/CodeNimble" class="source-code">Source Code</a>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-image">
+            <img src="img/app.png" alt="Screenshot of Code Nimble">
+        </div>
+        <div class="hero-content">
+            <h1>The next generation code editor for Competitive Programming</h1>
+            <p>Experience the cutting-edge features designed to enhance your competitive programming skills. Join our community to stay updated with the latest trends and tips in coding.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn download-btn">Download</a>
+                <a href="#" class="btn source-btn">Source Code</a>
+            </div>
         </div>
     </section>
-    
-    <section class="section2">
-        <h2>Features</h2>
-        <div class="features">
-            <div class="card">
-                <img src="img/pbinfo.png" alt="Pbinfo tools">
-                <h3>Pbinfo tools</h3>
+
+    <section class="features">
+        <h2>Key Features</h2>
+        <div class="features-container">
+            <div class="feature-item" data-feature="pbinfo">
+                <h3>Pbinfo Tools</h3>
                 <p>With this tool, you no longer need a browser to submit your problem code. With just a click, you can submit your code on pbinfo directly from this app.</p>
             </div>
-            <div class="card">
-                <img src="img/fetch.png" alt="Fetch test cases">
-                <h3>Fetch test cases</h3>
+            <div class="feature-item" data-feature="testcases">
+                <h3>Fetch Test Cases</h3>
                 <p>You can fetch test cases from different competitive platforms with just a click. Now you no longer need to copy and paste samples.</p>
             </div>
-            <div class="card">
-                <img src="img/interface.png" alt="Clean interface">
-                <h3>Clean interface</h3>
+            <div class="feature-item" data-feature="interface">
+                <h3>Clean Interface</h3>
                 <p>Code Nimble design is user-friendly, super fast, and very customizable. You will feel great using this application.</p>
             </div>
-            <div class="card">
-                <img src="img/template.png" alt="Templates">
+            <div class="feature-item" data-feature="templates">
                 <h3>Templates</h3>
                 <p>Automate your work with this feature! This will create a new custom file with a custom code.</p>
             </div>
-            <div class="card">
-                <img src="img/run.png" alt="Run & Support">
+            <div class="feature-item" data-feature="run">
                 <h3>Run & Support</h3>
                 <p>Run your C++ & Python files with just a click in just a matter of time.</p>
             </div>
-            <div class="card">
-                <img src="img/paint.png" alt="Paint window">
-                <h3>Paint window</h3>
+            <div class="feature-item" data-feature="paint">
+                <h3>Paint Window</h3>
                 <p>With this tool, you no longer need to open paint app to do your sketches and notes. You can draw whatever you want.</p>
             </div>
-            <div class="card">
-                <img src="img/server.png" alt="Local server">
-                <h3>Local server</h3>
+            <div class="feature-item" data-feature="server">
+                <h3>Local Server</h3>
                 <p>You want to cooperate with your friend on the same problem or you have a team competition? This will help you and your team edit the code live for everyone.</p>
             </div>
-            <div class="card">
-                <img src="img/input.png" alt="Input, output & expected output">
-                <h3>Input, output & expected output</h3>
-                <p>Automate your code reviewing with these inputs. Run with the pre-input and compare output and expected output to see if your code will get the full score.</p>
+            <div class="feature-item" data-feature="io">
+                <h3>Input, Output & Expected Output</h3>
+                <p>Manage input, output and expected output easily while testing your code efficiently.</p>
+            </div>
+        </div>
+    
+        <!-- Popup for more details -->
+        <div class="popup-overlay">
+            <div class="popup">
+                <span class="close-popup">&times;</span>
+                <div class="popup-content"></div>
             </div>
         </div>
     </section>
-    
-    <section class="section3">
+
+    <section class="lab">
         <h2>Future</h2>
         <p>As we look to the future, Code Nimble is poised to revolutionize the competitive programming landscape even further. Our vision includes integrating AI-powered code analysis, providing real-time collaboration tools that connect programmers globally, and creating a seamless environment where every step of the competitive coding process is optimized for efficiency and speed. We envision a platform that not only supports individual coders but also fosters a community where knowledge is shared and innovation thrives. The future of Code Nimble is one where the boundaries between learning, practicing, and competing are blurred, offering a holistic experience that evolves with the needs of programmers worldwide.</p>
-        <a href="#" class="button">Lab</a>
+        <a href="#" class="lab-btn">Lab</a>
     </section>
     
-    <section class="section4">
+    <section class="documentation">
         <h2>Documentation</h2>
         <p>Explore our comprehensive documentation, blogs, and FAQs to get the most out of Code Nimble.</p>
-        <div class="buttons">
-            <a href="#">Docs</a>
-            <a href="#">Blogs</a>
-            <a href="#">FAQ</a>
+        <div class="doc-buttons">
+            <a href="#" class="doc-btn">Docs</a>
+            <a href="#" class="doc-btn">Blogs</a>
+            <a href="#" class="doc-btn">FAQ</a>
         </div>
     </section>
     
     <footer>
-        <div class="icons">
-            <a href="https://github.com/HojdaAdelin/CodeNimble"><img src="img/github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/adelin-hojda-69590a22b/"><img src="img/in.png" alt="LinkedIn"></a>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="img/png-logo.png" alt="Code Nimble Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Lab</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="img/github.png" alt="GitHub"></a>
+                <a href="#"><img src="img/linkedin.svg" alt="LinkedIn"></a>
+            </div>
         </div>
-        <p>&copy; 2024 Code Nimble. All rights reserved.</p>
-    </footer>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
+        </div>
+    </footer>    
+
+    <script>
+        const featureItems = document.querySelectorAll('.feature-item');
+        const popupOverlay = document.querySelector('.popup-overlay');
+        const popupContent = document.querySelector('.popup-content');
+        const closePopup = document.querySelector('.close-popup');
+    
+        featureItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const feature = item.dataset.feature;
+                let content = '';
+    
+                switch(feature) {
+                    case 'pbinfo':
+                        content = '<h3>Pbinfo Tools</h3><p>With this tool, you no longer need a browser to submit your problem code. With just a click, you can submit your code on pbinfo directly from this app.</p>';
+                        break;
+                    case 'testcases':
+                        content = '<h3>Fetch Test Cases</h3><p>You can fetch test cases from different competitive platforms with just a click. Now you no longer need to copy and paste samples.</p>';
+                        break;
+                    case 'interface':
+                        content = '<h3>Clean Interface</h3><p>Code Nimble design is user-friendly, super fast, and very customizable. You will feel great using this application.</p>';
+                        break;
+                    case 'templates':
+                        content = '<h3>Templates</h3><p>Automate your work with this feature! This will create a new custom file with a custom code.</p>';
+                        break;
+                    case 'run':
+                        content = '<h3>Run & Support</h3><p>Run your C++ & Python files with just a click in just a matter of time.</p>';
+                        break;
+                    case 'paint':
+                        content = '<h3>Paint Window</h3><p>With this tool, you no longer need to open paint app to do your sketches and notes. You can draw whatever you want.</p>';
+                        break;
+                    case 'server':
+                        content = '<h3>Local Server</h3><p>You want to cooperate with your friend on the same problem or you have a team competition? This will help you and your team edit the code live for everyone.</p>';
+                        break;
+                    case 'io':
+                        content = '<h3>Input, Output & Expected Output</h3><p>Manage input, output and expected output easily while testing your code efficiently.</p>';
+                        break;
+                }
+    
+                popupContent.innerHTML = content;
+                popupOverlay.style.display = 'flex';
+            });
+        });
+    
+        closePopup.addEventListener('click', () => {
+            popupOverlay.style.display = 'none';
+        });
+    
+        popupOverlay.addEventListener('click', (e) => {
+            if (e.target === popupOverlay) {
+                popupOverlay.style.display = 'none';
+            }
+        });
+    </script>
+        
 </body>
 </html>

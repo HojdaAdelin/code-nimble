@@ -1,406 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ro">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blogs - Code Nimble</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-            background-color: #0a192f;
-            color: #d1e8ff;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        header {
-            background: linear-gradient(to right, #172a45, #0a192f);
-            padding: 20px 40px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        header img {
-            height: 40px;
-        }
-        nav a {
-            color: #d1e8ff;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #00aaff;
-        }
-        .blogs-container {
-            padding: 60px 40px;
-            background: linear-gradient(to bottom, #0a192f, #112240);
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            justify-items: center;
-            flex-grow: 1;
-        }
-        .blog-card {
-            background-color: #172a45;
-            border-radius: 8px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            width: 300px; 
-            height: 400px;
-        }
-        .blog-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
-        }
-        .blog-card img {
-            width: 100%;
-            height: 50%;
-            object-fit: contain;
-        }
-        .blog-content {
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .blog-content h3 {
-            font-size: 20px;
-            margin-top: -20px;
-            margin-bottom: 10px;
-            color: #00aaff;
-        }
-        .blog-content p {
-            font-size: 16px;
-            color: #cbd5e0;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-        .blog-details {
-            display: none;
-            padding: 60px 40px;
-            background: linear-gradient(to bottom, #0a192f, #112240);
-            flex-grow: 1;
-        }
-        .blog-details.active {
-            display: block;
-        }
-        .blog-details .back-button {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-            cursor: pointer;
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-        }
-        .blog-details .back-button:hover {
-            text-decoration: underline;
-        }
-        .blog-details .back-button::before {
-            content: '←';
-            margin-right: 10px;
-            font-size: 24px;
-        }
-        .blog-details h1 {
-            margin-top: 30px;
-        }
-        .blog-details h2 {
-            margin-top: 60px;
-            margin-bottom: 25px;
-        }
-        .blog-details h3 {
-            margin-bottom: -10px;
-        }
-        footer {
-            background-color: #172a45;
-            color: white;
-            text-align: center;
-            margin-top: auto;
-            width: 100%;
-        }
-        footer .icons {
-            margin-top: 10px;
-        }
-        footer .icons a {
-            margin: 0 10px;
-            color: white;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        footer .icons a:hover {
-            color: #00aaff;
-        }
-    </style>
+    <title>Download - Code Nimble</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <a href="../index.html"><img src="../img/png-logo.png" alt="Code Nimble Logo"></a>
-    <nav>
-        <a href="#">Resources</a>
-        <a href="#">Docs</a>
-        <a href="#">Blogs</a>
-        <a href="#">FAQ</a>
-        <a href="#">Lab</a>
-    </nav>
-</header>
-
-<div class="blogs-container">
-    <div class="blog-card" onclick="showBlog(1)">
-        <img src="../img/app2-0.png" alt="Blog 1 Image">
-        <div class="blog-content">
-            <h3>Code Nimble - Version: 2.0</h3>
-            <p>Code Nimble 2.0 is a streamlined editor for competitive programming. This new version adds direct Pbinfo submissions, test case fetching, fast C++/Python execution, customizable templates, and live collaboration, all within a clean interface.</p>
+    <!-- Include the same header -->
+    <header>
+        <div class="logo">
+            <img src="/img/png-logo.png" alt="Code Nimble Logo">
         </div>
-    </div>
-    <div class="blog-card" onclick="showBlog(2)">
-        <img src="../img/app.png" alt="Blog 2 Image">
-        <div class="blog-content">
-            <h3>Code Nimble - Version 1.5</h3>
-            <p>Code Nimble 1.5 brings a lot of things like local server, paint mode, file tab, suggestions etc...</p>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Lab</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Blogs Section -->
+    <section class="blogs-section">
+        <h2>Our Blogs</h2>
+        <div class="blogs-container">
+            <div class="blog-card">
+                <h3>Code Nimble 2.0</h3>
+                <p>Coming soon! Stay tuned for the release notes and exciting new features of Code Nimble 2.0.</p>
+                <a href="#" class="read-more">Read More</a>
+            </div>
+            <div class="blog-card">
+                <h3>Code Nimble 1.5</h3>
+                <p>We’re excited to announce the latest update to Code Nimble, now at version 1.5. This release brings a host of new features, enhancements, and fixes to improve your programming experience...</p>
+                <a href="blog-v1-5.html" class="read-more">Read Full Blog</a>
+            </div>
         </div>
-    </div>
-</div>
-
-<div class="blog-details" id="blog1-details">
-    <a href="#" class="back-button" onclick="showCards()">Back to Blogs</a>
-    <h1>Code Nimble - Version: 2.0</h2>
-    <p>We’re thrilled to announce the release of Code Nimble 2.0! This major update brings a wealth of new features, enhancements, and fixes designed to enhance your programming experience. Here’s a detailed look at what’s new and what has been improved:</p>
-
-    <h2>New Features</h2>
-
-    <h3>Server Status in Status Bar</h3>
-    <p>Monitor the status of your local server directly from the status bar, providing real-time updates on server activity and connectivity.</p>
-
-    <h3>Auto Save</h3>
-    <p>Files will now automatically save every 5 seconds, ensuring that your work is preserved with minimal manual intervention.</p>
-
-    <h3>Ctrl+Roller Bind</h3>
-    <p>Enhance your navigation and editing experience with a new bind for Ctrl+Roller, allowing for smoother scrolling and zooming.</p>
-
-    <h3>Refresh Editor</h3>
-    <p>Use Ctrl+Shift+R to quickly refresh the editor, updating your workspace and clearing any temporary glitches.</p>
-
-    <h3>Save Session</h3>
-    <p>Save your current session, including open files and editor state, so you can easily resume work later.</p>
-
-    <h3>Summer Theme</h3>
-    <p>Enjoy a fresh, new Summer theme that adds a vibrant touch to your coding environment.</p>
-
-    <h3>Drag and Drop Files</h3>
-    <p>Drag and drop files directly into the editor for quicker and easier file management.</p>
-
-    <h3>Exit Accelerator</h3>
-    <p>Accelerate the process of exiting the application with a new exit accelerator feature.</p>
-
-    <h3>Open Recent</h3>
-    <p>Quickly access recently opened files through the new Open Recent functionality.</p>
-
-    <h3>LAN Password</h3>
-    <p>Secure your local server with a LAN password to restrict access and protect your code.</p>
-
-    <h3>Terminal Inside Editor</h3>
-    <p>Use an integrated terminal within the editor for seamless command-line access and execution.</p>
-
-    <h3>Theme Changer</h3>
-    <p>Switch between themes effortlessly with the new theme changer feature.</p>
-
-    <h3>Tags in Suggestions</h3>
-    <p>View and use tags in code suggestions to enhance code completion and context-awareness.</p>
-
-    <h3>Snippet Code Interface</h3>
-    <p>Manage and insert code snippets more effectively with the new snippet code interface.</p>
-
-    <h3>Snippets in Suggestions</h3>
-    <p>Code snippets are now integrated into suggestions for faster and more efficient coding.</p>
-
-    <h3>Kilonova.ro Tools</h3>
-    <p>Integration with Kilnova.ro tools adds additional functionality and support for competitive programming.</p>
-
-    <h3>Python Support</h3>
-    <p>Extended support for Python allows you to write, run, and manage Python code seamlessly within Code Nimble.</p>
-
-    <h3>Scrollbar in Suggestions</h3>
-    <p>Navigate through code suggestions more easily with the addition of a scrollbar.</p>
-
-    <h3>Right Panel</h3>
-    <p>A new right panel provides additional space for tools, views, and customizations.</p>
-
-    <h3>New Input & Output System</h3>
-    <p>Revamped system for handling input and output, including expected output and test case checks.</p>
-
-    <h3>Submit Code Directly to Pbinfo.ro</h3>
-    <p>Submit your code directly to Pbinfo.ro from within the app for streamlined competitive programming.</p>
-
-    <h3>Open Site Function in Home</h3>
-    <p>Easily open websites from the Home screen for quick access to resources and documentation.</p>
-
-    <h3>New Code Highlight System</h3>
-    <p>Experience improved code highlighting with a new system for better readability and syntax awareness.</p>
-
-    <h3>New Submit Code Button</h3>
-    <p>A new, more accessible submit button makes it easier to submit your code for evaluation.</p>
-
-    <h3>Fetch Test Cases Support</h3>
-    <p>Fetch test cases from multiple platforms, including Pbinfo.ro, Kilnova.ro, Codeforces.com, and Atcoder.jp.</p>
-
-    <h3>New Change Log in App</h3>
-    <p>View the change log directly within the app to keep track of updates and new features.</p>
-
-    <h3>Run Python Files</h3>
-    <p>Execute Python files directly within the editor, enhancing the versatility of your coding environment.</p>
-
-    <h3>New Local Server Interface</h3>
-    <p>A revamped local server interface improves usability and management of collaborative coding sessions.</p>
-
-    <h3>Theme System Buttons</h3>
-    <p>New buttons for the theme system provide easy access to theme management and customization.</p>
-
-    <h3>Clear Terminal Function</h3>
-    <p>Clear the terminal with a single function to maintain a clean and organized workspace.</p>
-
-    <h3>Code Formatting</h3>
-    <p>Improved code formatting features enhance readability and maintain coding standards.</p>
-
-    <h3>Output Comparator</h3>
-    <p>Compare outputs directly within the editor to verify code correctness and debug issues efficiently.</p>
-
-    <h3>Highlight Color Palette</h3>
-    <p>Add custom highlight colors to themes using the new color palette feature in the JSON theme files.</p>
-
-    <h3>Paint Mode Enhancements</h3>
-    <p>In Paint Mode, clicking on a color now changes the drawing tool to a pencil for more precise editing.</p>
-
-    <h3>Go to Line Feature</h3>
-    <p>Quickly navigate to specific lines in your code with the new Go to Line feature.</p>
-
-    <h2>Fixes and Changes</h2>
-
-    <h3>Fixed Delete File Function</h3>
-    <p>Resolved issues with the delete file function to ensure proper file management.</p>
-
-    <h3>Changed Template & Theme Interface</h3>
-    <p>Updated the interface for templates and themes for a more streamlined user experience.</p>
-
-    <h3>Fixed Suggestion Box</h3>
-    <p>Addressed problems with the suggestion box to improve code completion accuracy.</p>
-
-    <h3>Changed Open Recent List</h3>
-    <p>Updated the Open Recent list to better reflect recent file usage and access.</p>
-
-    <h3>Fixed Exit Function</h3>
-    <p>Resolved issues with the application exit function to ensure a smooth closing experience.</p>
-
-    <h3>Changed Treeview Indicator</h3>
-    <p>Improved the treeview indicator for better visual feedback and navigation.</p>
-
-    <h3>Removed Guide from Home</h3>
-    <p>The Guide has been removed from the Home screen to streamline the user interface.</p>
-
-    <h3>Fixed Run Function</h3>
-    <p>Addressed issues with the run function to ensure reliable code execution.</p>
-
-    <h3>Fixed Tab Function for Suggestions</h3>
-    <p>Corrected problems with tab navigation in code suggestions for improved usability.</p>
-
-    <h3>Fixed Templates</h3>
-    <p>Resolved issues with templates to ensure they function correctly and efficiently.</p>
-
-    <h3>Fixed Double Paste Issue</h3>
-    <p>Addressed the problem of double pasting to prevent duplicate content errors.</p>
-
-    <h3>UTF-8 Support</h3>
-    <p>Added support for UTF-8 encoding to handle a wider range of characters and symbols.</p>
-
-    <p>Thank you for your continued support and feedback. We’re committed to making Code Nimble the best tool for competitive programming. Enjoy the new features and improvements in version 2.0!</p>
-</div>
-
-<div class="blog-details" id="blog2-details">
-    <a href="#" class="back-button" onclick="showCards()">Back to Blogs</a>
-    <h1>Code Nimble - Version: 1.5</h2>
-    
-    <p>We’re excited to announce the latest update to Code Nimble, now at version 1.5. This release brings a host of new features, enhancements, and fixes to improve your programming experience. Here’s a breakdown of what’s new and what’s been fixed:</p>
-
-    <h2>New Features</h2>
-
-    <h3>Paint Mode</h3>
-    <p>We’ve integrated a paint window directly into the app, allowing you to draw and make notes without switching to an external paint application. You can now easily change colors within this mode and use tabs for better organization.</p>
-
-    <h3>Local Server</h3>
-    <p>This new feature enables real-time collaboration with others. You can now work on code simultaneously with your teammates using the local server functionality, which includes a connected users list in the server panel.</p>
-
-    <h3>Profile Management</h3>
-    <p>Manage your profiles directly within Code Nimble, making it easier to switch between different coding setups or user preferences.</p>
-
-    <h3>Autocomplete Enhancements</h3>
-    <p>C++ autocompletion is now more intuitive. Pressing ENTER will automatically complete the code when suggestions are mapped. We’ve also added autocomplete support for symbols like ", ', and *.</p>
-
-    <h3>Improved File Handling</h3>
-    <p>A new button bind in the file tab enhances your navigation experience, and a "*" indicator in the file tab shows when a file is modified, so you never lose track of unsaved changes.</p>
-
-    <h3>Settings and Customization</h3>
-    <p>The new theme system, using JSON files, allows you to easily switch between different visual themes, including the new Ocean theme. Customization options now include settings for the status bar and text highlighting for Python.</p>
-
-    <h3>Enhanced File Execution</h3>
-    <p>You can now run the content of the textbox directly without saving the file each time, streamlining your workflow. The file tab pack issue has also been resolved to prevent loss of tabs when none are open.</p>
-
-    <h3>New Documentation</h3>
-    <p>We’ve added CHANGELOG.md and CONTRIBUTION.md files for better tracking of updates and to guide contributors.</p>
-
-    <h2>Fixes</h2>
-
-    <h3>Autocompletion Corrections</h3>
-    <p>We’ve fixed issues with autocompletion when the suggestion list was not mapped correctly.</p>
-
-    <h3>Editor Stability</h3>
-    <p>Issues with Ctrl+Backspace and file saving have been addressed to ensure smoother operation.</p>
-
-    <h3>UI Enhancements</h3>
-    <p>We resolved issues with Input & Output display in the treeview and improved the redraw function after find & replace operations.</p>
-
-    <h3>Text Highlighting</h3>
-    <p>Text highlighting in the editor has been updated for better visibility and accuracy.</p>
-
-    <h3>Cursor Positioning</h3>
-    <p>The cursor position now updates correctly when using ENTER between curly braces, enhancing code formatting and readability.</p>
-
-    <p>Thank you for your continued support and feedback. We’re committed to making Code Nimble the best tool for competitive programming, and this update is a testament to our dedication. Enjoy the new features and improvements!</p>
-</div>
-
-<footer>
-    <div class="icons">
-        <a href="https://github.com/HojdaAdelin/CodeNimble"><img src="../img/github.png" alt="GitHub"></a>
-        <a href="https://www.linkedin.com/in/adelin-hojda-69590a22b/"><img src="../img/in.png" alt="LinkedIn"></a>
-    </div>
-    <p>&copy; 2024 Code Nimble. All rights reserved.</p>
-</footer>
-
-<script>
-    function showBlog(blogId) {
-        document.querySelector('.blogs-container').style.display = 'none';
-        document.querySelector('#blog' + blogId + '-details').classList.add('active');
-    }
-
-    function showCards() {
-        document.querySelector('.blogs-container').style.display = 'grid';
-        document.querySelectorAll('.blog-details').forEach(function(blogDetail) {
-            blogDetail.classList.remove('active');
-        });
-    }
-</script>
+    </section>
+
+    <!-- Include the same footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/img/png-logo.png" alt="Code Nimble Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Lab</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="/img/github.png" alt="GitHub"></a>
+                <a href="#"><img src="/img/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

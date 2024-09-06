@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download - Code Nimble</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Include the same header -->
+    <header>
+        <div class="logo">
+            <img src="/img/png-logo.png" alt="Code Nimble Logo">
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Docs</a></li>
+                <li><a href="#">Blogs</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Lab</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is Code Nimble?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Code Nimble is a new gen code editor dedicated for competitive programming.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How can I send the code directly to pbinfo from the app?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>
+                        Through Code Nimble's integrated pbinfo tools, you can submit code directly by configuring your pbinfo account in the app's settings and using the submit function.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is Code Nimble available on Linux?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>At present, Code Nimble is available on Windows. However, a version for Linux is in development and will be launched soon.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>Is Code Nimble available on Linux?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>At present, Code Nimble is available on Windows. However, a version for Linux is in development and will be launched soon.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>What is Paint Mode?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Paint mode is basically a simple paint app where you can draw things to understand more about the solution of the problem you're working at.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>How local server work?</h3>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p>If you want to collaborate with your team you can use local server. One of the team need to start the server and other must connect to the server with a specified password. After this anyone can send messages on the server chat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Include the same footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="/img/png-logo.png" alt="Code Nimble Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="#">Download</a></li>
+                    <li><a href="#">Docs</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Lab</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="/img/github.png" alt="GitHub"></a>
+                <a href="#"><img src="/img/linkedin.svg" alt="LinkedIn"></a>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const faqItems = document.querySelectorAll('.faq-item');
+    
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+    
+            question.addEventListener('click', () => {
+                item.classList.toggle('active');
+            });
+        });
+    </script>
+    
+</body>
+</html>

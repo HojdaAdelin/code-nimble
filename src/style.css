@@ -364,7 +364,7 @@ footer {
 /* Download Section */
 .download-section {
     padding: 80px 20px;
-    background-color: #121237;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -477,8 +477,8 @@ footer {
 
 /* Resources Section */
 .resources-section {
-    padding: 80px 20px;
-    background-color: #121237;
+    padding: 100px 20px;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -537,7 +537,7 @@ footer {
 /* FAQ Section */
 .faq-section {
     padding: 80px 20px;
-    background-color: #1a1a2e;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -556,7 +556,7 @@ footer {
 }
 
 .faq-item {
-    background-color: #0f0f3a;
+    background-color: #313131;
     border-radius: 10px;
     margin-bottom: 15px;
     overflow: hidden;
@@ -586,7 +586,7 @@ footer {
     max-height: 0;
     overflow: hidden;
     padding: 0 20px;
-    background-color: #1e1e3f;
+    background-color: #474747;
     transition: max-height 0.3s ease;
 }
 
@@ -605,13 +605,13 @@ footer {
 }
 
 .faq-question:hover {
-    background-color: #121237;
+    background-color: #474747;
 }
 
 /* Blogs Section */
 .blogs-section {
-    padding: 80px 20px;
-    background-color: #1a1a2e;
+    padding: 100px 20px;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -631,7 +631,7 @@ footer {
 }
 
 .blog-card {
-    background-color: #0f0f3a;
+    background-color: #313131;
     border-radius: 10px;
     padding: 20px;
     width: 300px;
@@ -674,7 +674,7 @@ footer {
 /* Blog Post Content */
 .blog-post {
     padding: 80px 20px;
-    background-color: #1a1a2e;
+    background-color: #264285;
     color: #fff;
     text-align: left;
 }
@@ -702,8 +702,8 @@ footer {
 
 /* Docs Section */
 .docs-section {
-    padding: 80px 20px;
-    background-color: #1a1a2e;
+    padding: 100px 20px;
+    background-color: #264285;
     color: #fff;
 }
 
@@ -714,7 +714,7 @@ footer {
 
 .docs-sidebar {
     width: 25%;
-    background-color: #0f0f3a;
+    background-color: #313131;
     padding: 20px;
     border-radius: 10px;
 }
@@ -749,7 +749,7 @@ footer {
 
 .docs-content {
     width: 75%;
-    background-color: #0b0c2a;
+    background-color: #313131;
     padding: 20px;
     border-radius: 10px;
 }
@@ -774,7 +774,7 @@ footer {
 }
 
 .doc-section pre {
-    background-color: #1a1a2e;
+    background-color: #1e1e1e;
     color: #00d4ff;
     padding: 10px;
     border-radius: 5px;

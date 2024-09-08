@@ -7,14 +7,14 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a2e;
+    background-color: #264285;
     color: #fff;
 }
 
 /* Header styles */
 header {
     height: 100px;
-    background-color: #0b0c2a;
+    background-color: #313131;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -126,7 +126,7 @@ nav ul li a:hover {
 /* Features Section */
 .features {
     padding: 50px 20px;
-    background-color: #0f0f3a;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -146,7 +146,7 @@ nav ul li a:hover {
 }
 
 .feature-item {
-    background-color: #1a1a2e;
+    background-color: #313131;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
@@ -216,7 +216,7 @@ nav ul li a:hover {
 /* Lab Section */
 .lab {
     padding: 80px 20px;
-    background-color: #121237;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -256,7 +256,7 @@ nav ul li a:hover {
 
 .documentation {
     padding: 80px 20px;
-    background-color: #0b0c2a;
+    background-color: #264285;
     color: #fff;
     text-align: center;
 }
@@ -299,7 +299,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #0b0c2a;
+    background-color: #313131;
     color: #fff;
     padding: 40px 20px;
     text-align: center;

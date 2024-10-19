@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="src/style.css">
 </head>
 <body>
-    <header>
+    <!-- Sticky Navigation Header -->
+    <header id="sticky-header">
         <div class="logo">
             <img src="img/png-logo.png" alt="Code Nimble Logo">
         </div>
@@ -18,26 +19,27 @@
                 <li><a href="src/docs.html">Docs</a></li>
                 <li><a href="src/blogs.html">Blogs</a></li>
                 <li><a href="src/faq.html">FAQ</a></li>
-                <li><a href="#">Lab</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Video -->
     <section class="hero">
-        <div class="hero-image">
-            <img src="img/app.png" alt="Screenshot of Code Nimble">
-        </div>
+        <video autoplay muted loop id="hero-video">
+            <source src="files/vid.mp4" type="video/mp4">
+            Browserul tău nu suportă redarea video.
+        </video>
         <div class="hero-content">
             <h1>The next generation code editor for Competitive Programming</h1>
             <p>Experience the cutting-edge features designed to enhance your competitive programming skills. Join our community to stay updated with the latest trends and tips in coding.</p>
             <div class="hero-buttons">
                 <a href="src/download.html" class="btn download-btn">Download</a>
-                <a href=""onclick="deschideFereastra('https://github.com/HojdaAdelin/CodeNimble')" class="btn source-btn">Source Code</a>
+                <a href="" onclick="deschideFereastra('https://github.com/HojdaAdelin/CodeNimble')" class="btn source-btn">Source Code</a>
             </div>
         </div>
     </section>
 
+    <!-- Features Section with Interactive Elements -->
     <section class="features">
         <h2>Key Features</h2>
         <div class="features-container">
@@ -74,7 +76,7 @@
                 <p>Manage input, output and expected output easily while testing your code efficiently.</p>
             </div>
         </div>
-    
+
         <!-- Popup for more details -->
         <div class="popup-overlay">
             <div class="popup">
@@ -84,12 +86,16 @@
         </div>
     </section>
 
+    <!-- 3D Lab Section -->
     <section class="lab">
         <h2>Future</h2>
         <p>As we look to the future, Code Nimble is poised to revolutionize the competitive programming landscape even further. Our vision includes integrating AI-powered code analysis, providing real-time collaboration tools that connect programmers globally, and creating a seamless environment where every step of the competitive coding process is optimized for efficiency and speed. We envision a platform that not only supports individual coders but also fosters a community where knowledge is shared and innovation thrives. The future of Code Nimble is one where the boundaries between learning, practicing, and competing are blurred, offering a holistic experience that evolves with the needs of programmers worldwide.</p>
+        <img src="img/app.png" alt="Future of Code Nimble" class="lab-image">
         <a href="#" class="lab-btn">Lab</a>
     </section>
     
+
+    <!-- Documentation Section -->
     <section class="documentation">
         <h2>Documentation</h2>
         <p>Explore our comprehensive documentation, blogs, and FAQs to get the most out of Code Nimble.</p>
@@ -99,7 +105,8 @@
             <a href="src/faq.html" class="doc-btn">FAQ</a>
         </div>
     </section>
-     
+
+    <!-- Footer -->
     <footer>
         <div class="footer-container">
             <div class="footer-logo">
@@ -123,9 +130,21 @@
         <div class="footer-copyright">
             <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
         </div>
-    </footer>    
+    </footer>
 
+    <!-- Script for Popups and Sticky Nav -->
     <script>
+        // Sticky Navigation
+        window.onscroll = function() {
+            var header = document.getElementById("sticky-header");
+            if (window.pageYOffset > 50) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        };
+
+        // Popup for Features
         const featureItems = document.querySelectorAll('.feature-item');
         const popupOverlay = document.querySelector('.popup-overlay');
         const popupContent = document.querySelector('.popup-content');
@@ -177,10 +196,14 @@
                 popupOverlay.style.display = 'none';
             }
         });
+
+        // 3D Lab functionality (placeholder)
+        const canvas = document.getElementById('app-model');
+        // Placeholder for future 3D functionality
+
         function deschideFereastra(link) {
             window.open(link, "_blank");
         }
     </script>
-        
 </body>
 </html>

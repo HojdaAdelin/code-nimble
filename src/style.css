@@ -1,4 +1,4 @@
-/* Reset CSS */
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,839 +6,703 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #264285;
-    color: #fff;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
 }
 
-/* Header styles */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* Header Styles */
 header {
-    height: 100px;
-    background-color: #313131;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    position: relative;
+    z-index: 1000;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 2px -2px gray;
 }
 
 .logo img {
-    height: 60px;
-    width: 60px;
-    object-fit: contain;
+    height: 50px;
 }
 
-nav ul {
-    display: flex;
-    gap: 20px;
-}
-
-nav ul li {
+.nav-links {
     list-style: none;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 16px;
-    transition: color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-}
-
-/* Hover effect */
-nav ul li a:hover {
-    color: #00d4ff;
-    text-shadow: 0 0 8px #00d4ff;
-}
-
-/* Hero Section */
-.hero {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    gap: 20px;
-    height: calc(100vh - 100px); /* To fill the rest of the screen below header */
 }
 
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    border-radius: 10px;
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    padding: 10px 20px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #777;
+}
+
+/* Hero Section with Video Background */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+#hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .hero-content {
-    max-width: 50%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    z-index: 2;
 }
 
-.hero-content h1 {
-    font-size: 2rem;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.1rem;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-}
-
-/* Button styles */
-.btn {
-    padding: 15px 30px;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 8px;
-    transition: background-color 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
-    text-align: center;
-}
-
-.download-btn {
-    background-color: #00d4ff;
-    color: #0b0c2a;
-    text-shadow: 0 0 10px #00d4ff;
-}
-
-.download-btn:hover {
-    background-color: #009fcc;
-    text-shadow: 0 0 15px #00d4ff;
-}
-
-.source-btn {
+.hero-buttons .btn {
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 20px;
     background-color: #444;
-    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.source-btn:hover {
-    background-color: #555;
-    text-shadow: 0 0 8px #fff;
+.hero-buttons .btn:hover {
+    background-color: #666;
 }
 
 /* Features Section */
 .features {
-    padding: 50px 20px;
-    background-color: #264285;
-    color: #fff;
+    background-color: white;
+    padding: 50px;
     text-align: center;
 }
 
-.features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
-}
-
-/* Feature items grid */
 .features-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
 .feature-item {
-    background-color: #313131;
-    padding: 20px;
+    background-color: #eee;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
     cursor: pointer;
-    position: relative;
 }
 
-.feature-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-    color: #fff;
-}
-
-.feature-item p {
-    font-size: 1rem;
-    color: #ccc;
-}
-
-/* Hover effects */
 .feature-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.feature-item:hover h3 {
-    color: #00d4ff;
-}
-
-/* Popup styles */
+/* Popup Styles */
 .popup-overlay {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: none;
+    background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
 }
 
 .popup {
-    background-color: #1a1a2e;
+    background-color: white;
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(0, 212, 255, 0.7);
-    max-width: 500px;
-    width: 90%;
+    border-radius: 10px;
+    width: 400px;
     text-align: center;
-}
-
-.popup-content {
-    font-size: 1.1rem;
-    color: #fff;
 }
 
 .close-popup {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 1.5rem;
-    color: #fff;
+    right: 10px;
+    font-size: 24px;
     cursor: pointer;
 }
 
-/* Lab Section */
+/* Lab Section - 3D Model */
 .lab {
-    padding: 80px 20px;
-    background-color: #264285;
-    color: #fff;
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
     text-align: center;
+    position: relative;
+    perspective: 1000px;
+}
+.lab-image {
+    max-width: 65%; 
+    height: auto;   
+    display: block;  
+    margin: 40px auto; 
+    transition: transform 0.3s; 
+}
+.lab-image:hover {
+    transform: scale(1.05) rotateY(10deg);
 }
 
-.lab h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
-}
-
-.lab p {
-    max-width: 800px;
-    margin: 0 auto 50px auto;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    color: #ccc;
-}
-
-/* Lab Button */
-.lab-btn {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: #00d4ff;
-    color: #121237;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.lab-btn:hover {
-    background-color: #00bfff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+#app-model {
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    margin-top: 20px;
 }
 
 .documentation {
-    padding: 80px 20px;
-    background-color: #264285;
-    color: #fff;
+    background-color: white;
+    padding: 50px 20px;
     text-align: center;
-}
-
-.documentation h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
+    position: relative; 
 }
 
 .documentation p {
-    max-width: 800px;
-    margin: 0 auto 40px auto;
-    font-size: 1.2rem;
-    color: #ccc;
+    margin-bottom: 30px; 
 }
 
-/* Documentation Buttons */
-.doc-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+
+.doc-buttons .doc-btn {
+    margin: 20px;
+    padding: 15px 30px;
+    background-color: #444;
+    color: white;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.doc-btn {
-    padding: 15px 40px;
-    background-color: #00d4ff;
-    color: #121237;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+.doc-buttons .doc-btn:hover {
+    background-color: #666;
 }
 
-.doc-btn:hover {
-    background-color: #00bfff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
-}
-
+/* Footer Styles */
 footer {
-    background-color: #313131;
-    color: #fff;
-    padding: 40px 20px;
-    text-align: center;
+    background-color: #333;
+    color: white;
 }
 
 .footer-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-bottom: 20px;
+    padding: 0 20px;
 }
 
 .footer-logo img {
-    height: 60px;
-    width: 60px;
+    height: 50px;
 }
 
 .footer-links ul {
     list-style: none;
     display: flex;
-    gap: 15px;
 }
 
-.footer-links ul li {
-    display: inline;
+.footer-links li {
+    margin-left: 20px;
 }
 
-.footer-links ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s ease-in-out;
+.footer-links a {
+    color: white;
+    padding: 10px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: background-color 0.3s;
 }
 
-.footer-links ul li a:hover {
-    color: #00d4ff;
-}
-
-.footer-social a {
-    margin: 0 10px;
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
+.footer-links a:hover {
+    background-color: #777;
 }
 
 .footer-social a img {
-    width: 30px;
     height: 30px;
+    margin-left: 10px;
+    transition: opacity 0.3s;
 }
 
-.footer-social a:hover {
-    transform: scale(1.2);
+.footer-social a img:hover {
+    opacity: 0.8;
 }
 
 .footer-copyright {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #ccc;
+    text-align: center;
+    padding: 20px 0;
+    background-color: #222;
 }
 
-/* Download Section */
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    header {
+        flex-direction: row; /* Asigură că header-ul rămâne pe o linie */
+        align-items: center; /* Centrează elementele vertical */
+        flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+    }
+    .faq-container {
+        padding: 20px 10px;
+    }
+    .blog-container {
+        padding: 20px 10px;
+    }
+    .blogs-container {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        flex: 1 1 100%;
+    }
+    .features-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .nav-links {
+        justify-content: flex-end; /* Aliniază butoanele la dreapta */
+        width: 100%; /* Face nav-ul să ocupe întreaga lățime */
+    }
+
+    .nav-links li {
+        margin: 5px; /* Spațiu între butoane pe verticală și orizontală */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-social {
+        margin-top: 20px;
+    }
+}
+
+
 .download-section {
-    padding: 80px 20px;
-    background-color: #264285;
-    color: #fff;
-    text-align: center;
+    padding: 20px;
+    text-align: center; /* Aliniază conținutul în centru */
+    background-color: #f9f9f9; /* Fundal deschis pentru secțiune */
 }
 
 .download-content {
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 800px; /* Lățime maximă pentru a restricționa lățimea conținutului */
+    margin: 0 auto; /* Centrează secțiunea pe pagină */
 }
 
-.download-content h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
+h2 {
+    font-size: 2em; /* Dimensiune mai mare pentru titlu */
+    margin-bottom: 10px; /* Spațiu sub titlu */
 }
 
 .version-text {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #ccc;
+    font-size: 1.2em; /* Dimensiune text pentru versiune */
+    margin-bottom: 20px; /* Spațiu sub textul versiunii */
 }
 
 .app-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
-    margin-bottom: 20px;
+    width: 100%; /* Imaginea se va adapta la lățimea containerului */
+    max-width: 600px; /* Lățime maximă pentru imagine */
+    height: auto; /* Întreține raportul de aspect */
+    margin-bottom: 20px; /* Spațiu sub imagine */
 }
 
 .download-btn-container {
-    margin: 20px 0;
+    margin: 20px 0; /* Spațiu de sus și jos pentru butonul de descărcare */
 }
 
 .download-btn {
-    display: inline-flex;
-    padding: 15px 40px;
-    background-color: #00d4ff;
-    color: #121237;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 50px;
-    text-decoration: none;
-    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    align-items: center;
+    display: flex; /* Folosește flexbox pentru a alinia elementele */
+    align-items: center; /* Centrează elementele vertical */
+    justify-content: center; /* Centrează elementele orizontal */
+    padding: 10px 20px; /* Spațiu interior pentru buton */
+    background-color: #007bff; /* Culoare de fundal pentru buton */
+    color: white; /* Culoarea textului */
+    border-radius: 5px; /* Colțuri rotunjite */
+    text-decoration: none; /* Elimină sublinierea */
+    transition: background-color 0.3s; /* Efect de tranziție la hover */
 }
 
 .download-btn img {
-    width: 50px;
-    height: 50px;
-    margin-left: 10px;
+    margin-left: 8px; /* Spațiu între text și pictogramă */
+    width: 20px; /* Dimensiunea pictogramei */
+    height: auto; /* Întreține raportul de aspect */
 }
 
 .download-btn:hover {
-    background-color: #00bfff;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
+    background-color: #0056b3; /* Culoare mai închisă la hover */
 }
 
-/* More Versions */
+
 .more-versions {
-    margin-top: 40px;
-    text-align: center;
-}
-
-.more-versions p {
-    font-size: 1.2rem;
-    color: #fff;
+    margin-top: 30px; /* Spațiu de sus pentru secțiunea versiunilor suplimentare */
 }
 
 .more-versions ul {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
+    list-style-type: none; /* Elimină punctele de pe listă */
+    padding: 0; /* Elimină padding-ul */
 }
 
-.more-versions ul li {
-    margin-top: 10px;
+.more-versions li {
+    margin: 5px 0; /* Spațiu între versiunile suplimentare */
 }
 
-.more-versions ul li a {
-    font-size: 1.2rem;
-    color: #00d4ff;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
+.more-versions a {
+    text-decoration: none; /* Elimină sublinierea link-urilor */
+    color: #007bff; /* Culoare pentru link-uri */
 }
 
-.more-versions ul li a img {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+.more-versions a:hover {
+    text-decoration: underline; /* Subliniere la hover */
 }
 
-.more-versions ul li a:hover {
-    color: #00bfff;
-}
-
-.linux-info {
-    margin-top: 20px;
-}
-
-.linux-info p {
-    font-size: 1.2rem;
-    color: #ccc;
-}
-
-.linux-info span {
-    color: #ff5e5e;
-    font-weight: bold;
-}
-
-/* Resources Section */
 .resources-section {
-    padding: 100px 20px;
-    background-color: #264285;
-    color: #fff;
-    text-align: center;
+    padding: 50px; /* Spațiu interior pentru secțiunea de resurse */
+    background-color: #f9f9f9; /* Culoare de fundal deschisă */
+    text-align: center; /* Centrarea textului */
+    height: 80vh;
 }
 
 .resources-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
+    font-size: 2em; /* Dimensiunea titlului secțiunii */
+    margin-bottom: 20px; /* Spațiu sub titlu */
 }
 
 .resources-table {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex; /* Folosește flexbox pentru a aranja coloanele */
+    justify-content: center; /* Centrează coloanele orizontal */
+    flex-wrap: wrap; /* Permite rânduri multiple */
 }
 
 .resources-column {
-    flex: 1;
-    min-width: 200px;
-    max-width: 300px;
-    border: 2px solid #00d4ff;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: #1e1e3f;
+    flex: 1; /* Permite coloanelor să crească uniform */
+    min-width: 200px; /* Lățime minimă pentru coloane */
+    margin: 10px; /* Spațiu între coloane */
+    background-color: #ffffff; /* Culoare de fundal albă pentru coloane */
+    border-radius: 8px; /* Colțuri rotunjite */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Umbră ușoară */
+    padding: 20px; /* Spațiu interior pentru coloane */
 }
 
 .resources-column h3 {
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-    color: #00d4ff;
-    text-shadow: 0 0 8px #00d4ff;
+    font-size: 1.5em; /* Dimensiunea titlului coloanei */
+    margin-bottom: 15px; /* Spațiu sub titlul coloanei */
 }
 
 .resources-column ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none; /* Elimină marcajele pentru liste */
+    padding: 0; /* Elimină marginea internă */
 }
 
-.resources-column ul li {
-    margin-bottom: 10px;
+.resources-column li {
+    margin: 10px 0; /* Spațiu între elementele listei */
 }
 
-.resources-column ul li a {
+.resources-column a {
+    text-decoration: none; /* Elimină sublinierea */
+    color: #007bff; /* Culoarea link-urilor */
+    transition: color 0.3s; /* Efect de tranziție pentru hover */
+}
+
+.resources-column a:hover {
+    color: #0056b3; /* Culoare mai închisă la hover */
+}
+
+.docs-section {
+    display: flex; /* Aranjează conținutul în linii */
+    margin: 20px;
+    height: 100vh;
+    background-color: #f9f9f9; /* Fundal deschis */
+}
+
+.docs-container {
+    display: flex; /* Flex pentru a organiza bara laterală și conținutul */
+    width: 100%; /* Asigură că containerul ocupă întreaga lățime */
+}
+
+.docs-sidebar {
+    width: 250px; /* Lățimea barei laterale */
+    padding: 20px; /* Spațiu interior */
+    background-color: #fff; /* Fundal alb pentru bara laterală */
+    border-right: 1px solid #ddd; /* Linia separatoare */
+    position: sticky; /* Rămâne lipită la marginea ecranului */
+    top: 0; /* Se aliniază la marginea superioară a ferestrei */
+}
+
+.docs-sidebar h2 {
+    font-size: 1.5em; /* Dimensiunea titlului */
+    margin-bottom: 20px; /* Spațiu sub titlu */
+}
+
+.docs-sidebar ul {
+    list-style-type: none; /* Elimină marcajele pentru liste */
+    padding: 0; /* Elimină marginea internă */
+}
+
+.docs-sidebar li {
+    margin: 10px 0; /* Spațiu între elementele listei */
+}
+
+.docs-sidebar a {
+    text-decoration: none; /* Elimină sublinierea */
+    color: #007bff; /* Culoarea link-urilor */
+    transition: color 0.3s; /* Efect de tranziție pentru hover */
+}
+
+.docs-sidebar a:hover {
+    color: #0056b3; /* Culoare mai închisă la hover */
+}
+
+.docs-content {
+    flex: 1; /* Permite conținutului principal să se extindă */
+    padding: 20px; /* Spațiu interior */
+}
+
+.doc-section {
+    display: none; /* Ascunde secțiunile până la activare */
+}
+
+.doc-section.active {
+    display: block; /* Afișează secțiunea activă */
+}
+
+.doc-section h2 {
+    font-size: 2em; /* Dimensiunea titlului secțiunii */
+    margin-bottom: 10px; /* Spațiu sub titlu */
+}
+
+.doc-section p {
+    margin-bottom: 15px; /* Spațiu sub paragrafe */
+}
+
+pre {
+    background-color: #f1f1f1; /* Fundal deschis pentru cod */
+    padding: 15px; /* Spațiu interior */
+    border-radius: 5px; /* Colțuri rotunjite */
+    overflow-x: auto; /* Permite derularea orizontală */
+}
+
+.blogs-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 80vh;
+}
+
+.blogs-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.blog-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.blog-card p {
+    color: #666;
+}
+
+.read-more {
+    color: #007bff;
     text-decoration: none;
-    color: #00d4ff;
-    font-size: 1.2rem;
-    transition: color 0.3s ease-in-out;
 }
 
-.resources-column ul li a:hover {
-    color: #00bfff;
+.read-more:hover {
+    text-decoration: underline;
 }
 
-/* FAQ Section */
+/* Stil pentru containerul blogului */
+.blog-post {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stiluri pentru titluri și paragrafe */
+.blog-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.blog-container h2 {
+    font-size: 26px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.blog-container h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #444;
+}
+
+.blog-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Stiluri pentru liste */
+.blog-container ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-container ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    color: #666;
+}
+
+/* Stiluri pentru linkuri */
+.blog-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-container a:hover {
+    text-decoration: underline;
+}
+
 .faq-section {
-    padding: 80px 20px;
-    background-color: #264285;
-    color: #fff;
-    text-align: center;
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 .faq-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
 }
 
 .faq-container {
     max-width: 800px;
     margin: 0 auto;
-    text-align: left;
 }
 
 .faq-item {
-    background-color: #313131;
-    border-radius: 10px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
-    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    background-color: #eaf5ff;
 }
 
 .faq-question {
-    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     cursor: pointer;
-    position: relative;
 }
 
 .faq-question h3 {
-    font-size: 1.5rem;
+    font-size: 20px;
     margin: 0;
+    color: #333;
+}
+
+.faq-question:hover h3 {
+    color: #007bff;
 }
 
 .faq-toggle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 1.5rem;
+    font-size: 24px;
+    color: #007bff;
     transition: transform 0.3s ease;
-    color: #00d4ff;
-}
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    padding: 0 20px;
-    background-color: #474747;
-    transition: max-height 0.3s ease;
-}
-
-.faq-answer p {
-    font-size: 1.1rem;
-    padding: 20px 0;
-    margin: 0;
-}
-
-.faq-item.active .faq-answer {
-    max-height: 200px; /* Ajustează după necesitate */
 }
 
 .faq-item.active .faq-toggle {
     transform: rotate(45deg);
 }
 
-.faq-question:hover {
-    background-color: #474747;
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 }
 
-/* Blogs Section */
-.blogs-section {
-    padding: 100px 20px;
-    background-color: #264285;
-    color: #fff;
-    text-align: center;
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 15px;
 }
 
-.blogs-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    color: #00d4ff;
-    text-shadow: 0 0 10px #00d4ff;
-}
-
-.blogs-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.blog-card {
-    background-color: #313131;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #00d4ff;
-}
-
-.blog-card p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-    color: #bbb;
-}
-
-.blog-card .read-more {
-    color: #00d4ff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
-}
-
-.blog-card .read-more:hover {
-    color: #fff;
-    text-shadow: 0 0 5px #00d4ff;
-}
-
-.blog-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.7);
-}
-
-/* Blog Post Content */
-.blog-post {
-    padding: 80px 20px;
-    background-color: #264285;
-    color: #fff;
-    text-align: left;
-}
-
-.blog-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.blog-container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #00d4ff;
-}
-
-.blog-container h2, .blog-container h3 {
-    color: #00d4ff;
-}
-
-.blog-container p {
-    font-size: 1.1rem;
+.faq-answer p {
+    font-size: 16px;
+    color: #555;
     line-height: 1.6;
-    margin-bottom: 20px;
 }
-
-/* Docs Section */
-.docs-section {
-    padding: 100px 20px;
-    background-color: #264285;
-    color: #fff;
-}
-
-.docs-container {
-    display: flex;
-    gap: 20px;
-}
-
-.docs-sidebar {
-    width: 25%;
-    background-color: #313131;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.docs-sidebar h2 {
-    color: #00d4ff;
-    margin-bottom: 20px;
-}
-
-.docs-sidebar ul {
-    list-style: none;
-    padding: 0;
-}
-
-.docs-sidebar ul li {
-    margin-bottom: 10px;
-}
-
-.docs-sidebar ul li a {
-    color: #00d4ff;
-    text-decoration: none;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.docs-sidebar ul li a:hover, .docs-sidebar ul li a.active {
-    background-color: #00d4ff;
-    color: #0f0f3a;
-}
-
-.docs-content {
-    width: 75%;
-    background-color: #313131;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.doc-section {
-    display: none;
-}
-
-.doc-section.active {
-    display: block;
-}
-
-.doc-section h2 {
-    color: #00d4ff;
-    margin-bottom: 20px;
-}
-
-.doc-section ul {
-    list-style: disc;
-    margin-left: 20px;
-    color: #bbb;
-}
-
-.doc-section pre {
-    background-color: #1e1e1e;
-    color: #00d4ff;
-    padding: 10px;
-    border-radius: 5px;
-    overflow-x: auto;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    .hero-content {
-        max-width: 100%;
-    }
-
-    .hero-image {
-        order: 1; /* Display image first */
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-    .features-container {
-        grid-template-columns: 1fr;
-    }
-    .doc-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .download-content {
-        width: 100%;
-    }
-
-    .download-btn {
-        width: 100%;
-        text-align: center;
-    }
-    .resources-table {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .resources-column {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-    .docs-container {
-        flex-direction: column;
-    }
-
-    .docs-sidebar {
-        width: 100%;
-    }
-
-    .docs-content {
-        width: 100%;
-    }
-}
-

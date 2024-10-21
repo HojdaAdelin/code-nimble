@@ -170,7 +170,7 @@ header.sticky {
     perspective: 1000px;
 }
 .lab-image {
-    max-width: 50%; 
+    max-width: 65%; 
     height: auto;   
     display: block;  
     margin: 40px auto; 
@@ -272,6 +272,19 @@ footer {
         flex-direction: row; /* Asigură că header-ul rămâne pe o linie */
         align-items: center; /* Centrează elementele vertical */
         flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+    }
+    .faq-container {
+        padding: 20px 10px;
+    }
+    .blog-container {
+        padding: 20px 10px;
+    }
+    .blogs-container {
+        flex-direction: column;
+    }
+
+    .blog-card {
+        flex: 1 1 100%;
     }
     .features-container {
         flex-direction: column;
@@ -384,9 +397,10 @@ h2 {
 }
 
 .resources-section {
-    padding: 130px; /* Spațiu interior pentru secțiunea de resurse */
+    padding: 50px; /* Spațiu interior pentru secțiunea de resurse */
     background-color: #f9f9f9; /* Culoare de fundal deschisă */
     text-align: center; /* Centrarea textului */
+    height: 80vh;
 }
 
 .resources-section h2 {
@@ -436,8 +450,8 @@ h2 {
 
 .docs-section {
     display: flex; /* Aranjează conținutul în linii */
-    padding: 40px; /* Spațiu interior */
-    padding-bottom: 280px;
+    margin: 20px;
+    height: 100vh;
     background-color: #f9f9f9; /* Fundal deschis */
 }
 
@@ -506,4 +520,189 @@ pre {
     padding: 15px; /* Spațiu interior */
     border-radius: 5px; /* Colțuri rotunjite */
     overflow-x: auto; /* Permite derularea orizontală */
+}
+
+.blogs-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    height: 80vh;
+}
+
+.blogs-section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.blogs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.blog-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+}
+
+.blog-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.blog-card p {
+    color: #666;
+}
+
+.read-more {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Stil pentru containerul blogului */
+.blog-post {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Stiluri pentru titluri și paragrafe */
+.blog-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.blog-container h2 {
+    font-size: 26px;
+    margin-top: 30px;
+    color: #333;
+}
+
+.blog-container h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    color: #444;
+}
+
+.blog-container p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Stiluri pentru liste */
+.blog-container ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.blog-container ul li {
+    margin-bottom: 10px;
+    list-style-type: disc;
+    color: #666;
+}
+
+/* Stiluri pentru linkuri */
+.blog-container a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-container a:hover {
+    text-decoration: underline;
+}
+
+.faq-section {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.faq-section h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #007bff;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    background-color: #eaf5ff;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.faq-question h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+.faq-question:hover h3 {
+    color: #007bff;
+}
+
+.faq-toggle {
+    font-size: 24px;
+    color: #007bff;
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-toggle {
+    transform: rotate(45deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 200px;
+    padding-top: 15px;
+}
+
+.faq-answer p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
 }

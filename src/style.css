@@ -364,7 +364,7 @@ h2 {
 
 .app-image img {
     width: 100%; /* Imaginea se va adapta la lățimea containerului */
-    max-width: 600px; /* Lățime maximă pentru imagine */
+    max-width: 800px; /* Lățime maximă pentru imagine */
     height: auto; /* Întreține raportul de aspect */
     margin-bottom: 20px; /* Spațiu sub imagine */
 }

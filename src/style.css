@@ -105,8 +105,10 @@ header.sticky {
 /* Features Section */
 .features {
     background-color: white;
-    padding: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
     text-align: center;
+    width: 100%;
 }
 
 .features-container {
@@ -269,9 +271,17 @@ footer {
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header {
-        flex-direction: row; /* Asigură că header-ul rămâne pe o linie */
-        align-items: center; /* Centrează elementele vertical */
+        justify-content: center;
+        flex-direction: row; 
         flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+    }
+    
+    .doc-buttons .doc-btn {
+        margin: 0px;
+
+    }
+    .lab-image {
+        max-width: 100%; 
     }
     .faq-container {
         padding: 20px 10px;
@@ -300,19 +310,31 @@ footer {
     }
 
     .nav-links {
+        flex-direction: row-reverse;
         justify-content: flex-end; /* Aliniază butoanele la dreapta */
         width: 100%; /* Face nav-ul să ocupe întreaga lățime */
+        flex-wrap: wrap;
     }
-
+    .footer-links ul {
+        flex-direction: row-reverse;
+        justify-content: flex-end; /* Aliniază butoanele la dreapta */
+        width: 100%; /* Face nav-ul să ocupe întreaga lățime */
+        flex-wrap: wrap;
+    }
+    .footer-links li {
+        margin: 10px;
+    }
     .nav-links li {
-        margin: 5px; /* Spațiu între butoane pe verticală și orizontală */
+        margin: 10px; /* Spațiu între butoane pe verticală și orizontală */
     }
 
     .footer-container {
-        flex-direction: column;
+        justify-content: center;
+        flex-direction: row; 
+        flex-wrap: wrap;
         align-items: center;
     }
-
+    
     .footer-social {
         margin-top: 20px;
     }
@@ -397,10 +419,10 @@ h2 {
 }
 
 .resources-section {
-    padding: 50px; /* Spațiu interior pentru secțiunea de resurse */
+    padding: 40px; /* Spațiu interior pentru secțiunea de resurse */
     background-color: #f9f9f9; /* Culoare de fundal deschisă */
     text-align: center; /* Centrarea textului */
-    height: 80vh;
+    height: 100vh;
 }
 
 .resources-section h2 {
@@ -526,7 +548,7 @@ pre {
     flex: 1;
     padding: 20px;
     background-color: #f9f9f9;
-    height: 80vh;
+    height: 100vh;
 }
 
 .blogs-section h2 {
@@ -594,13 +616,13 @@ pre {
 .blog-container h2 {
     font-size: 26px;
     margin-top: 30px;
-    color: #333;
+    color: #000000;
 }
 
 .blog-container h3 {
     font-size: 20px;
     margin-top: 20px;
-    color: #444;
+    color: #707070;
 }
 
 .blog-container p {

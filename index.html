@@ -38,7 +38,13 @@
             </div>
         </div>
     </section>
-
+    <!-- 3D Lab Section -->
+    <section class="lab">
+        <h2>Future</h2>
+        <p>As we look to the future, Code Nimble is poised to revolutionize the competitive programming landscape even further. Our vision includes integrating AI-powered code analysis, providing real-time collaboration tools that connect programmers globally, and creating a seamless environment where every step of the competitive coding process is optimized for efficiency and speed. We envision a platform that not only supports individual coders but also fosters a community where knowledge is shared and innovation thrives. The future of Code Nimble is one where the boundaries between learning, practicing, and competing are blurred, offering a holistic experience that evolves with the needs of programmers worldwide.</p>
+        <img src="img/app.png" alt="Future of Code Nimble" class="lab-image">
+        
+    </section>
     <!-- Features Section with Interactive Elements -->
     <section class="features">
         <h2>Key Features</h2>
@@ -85,16 +91,35 @@
             </div>
         </div>
     </section>
-
-    <!-- 3D Lab Section -->
-    <section class="lab">
-        <h2>Future</h2>
-        <p>As we look to the future, Code Nimble is poised to revolutionize the competitive programming landscape even further. Our vision includes integrating AI-powered code analysis, providing real-time collaboration tools that connect programmers globally, and creating a seamless environment where every step of the competitive coding process is optimized for efficiency and speed. We envision a platform that not only supports individual coders but also fosters a community where knowledge is shared and innovation thrives. The future of Code Nimble is one where the boundaries between learning, practicing, and competing are blurred, offering a holistic experience that evolves with the needs of programmers worldwide.</p>
-        <img src="img/app.png" alt="Future of Code Nimble" class="lab-image">
-        
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <h2>Gallery</h2>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/app.png" alt="Gallery Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="img/app2.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/app3.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/app4.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/app5.png" alt="Gallery Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="img/app6.png" alt="Gallery Image 2">
+            </div>
+        </div>
     </section>
-    
-
+    <!-- Lightbox Overlay for Enlarged Image -->
+    <div class="lightbox-overlay">
+        <span class="lightbox-close">&times;</span>
+        <img class="lightbox-img" src="" alt="Enlarged Image">
+    </div>
     <!-- Documentation Section -->
     <section class="documentation">
         <h2>Documentation</h2>
@@ -205,6 +230,34 @@
         function deschideFereastra(link) {
             window.open(link, "_blank");
         }
+
+        // For Gallery
+
+        const lightboxOverlay = document.querySelector('.lightbox-overlay');
+        const lightboxImg = document.querySelector('.lightbox-img');
+        const closeLightbox = document.querySelector('.lightbox-close');
+        
+        // Select all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item img');
+
+        // Function to open lightbox with clicked image
+        galleryItems.forEach(item => {
+            item.addEventListener('click', () => {
+                lightboxImg.src = item.src; // Set the clicked image source to lightbox
+                lightboxOverlay.classList.add('show'); // Show the overlay
+            });
+        });
+
+        // Function to close lightbox when clicking outside the image or on the close button
+        closeLightbox.addEventListener('click', () => {
+            lightboxOverlay.classList.remove('show'); // Hide the overlay
+        });
+
+        lightboxOverlay.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) { // Only close if clicking outside the image
+                lightboxOverlay.classList.remove('show');
+            }
+        });
     </script>
 </body>
 </html>

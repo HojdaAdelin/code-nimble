@@ -20,7 +20,13 @@
                 <li><a href="src/blogs.html">Blogs</a></li>
                 <li><a href="src/faq.html">FAQ</a></li>
             </ul>
+            
         </nav>
+        <!-- Buton de meniu pentru mobil -->
+        <button class="menu-toggle" aria-label="Toggle menu">
+            &#9776;
+        </button>
+        <button class="close-menu" aria-label="Close menu">&times;</button>
     </header>
 
     <!-- Hero Section with Background Video -->
@@ -258,6 +264,25 @@
                 lightboxOverlay.classList.remove('show');
             }
         });
+        // Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+            const closeMenu = document.querySelector(".close-menu");
+
+            // Afișează meniul și butonul de închidere când se apasă pe toggle
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+                closeMenu.classList.toggle("visible"); // Arată butonul close-menu
+            });
+
+            // Închide meniul și ascunde butonul de închidere
+            closeMenu.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                closeMenu.classList.remove("visible"); // Ascunde butonul close-menu
+            });
+        });
+
     </script>
 </body>
 </html>

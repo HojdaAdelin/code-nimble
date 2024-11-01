@@ -24,6 +24,10 @@
                 
             </ul>
         </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            &#9776;
+        </button>
+        <button class="close-menu" aria-label="Close menu">&times;</button>
     </header>
 
     <section class="blog-post">
@@ -104,6 +108,26 @@
             <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+            const closeMenu = document.querySelector(".close-menu");
 
+            // Afișează meniul și butonul de închidere când se apasă pe toggle
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+                closeMenu.classList.toggle("visible"); // Arată butonul close-menu
+            });
+
+            // Închide meniul și ascunde butonul de închidere
+            closeMenu.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                closeMenu.classList.remove("visible"); // Ascunde butonul close-menu
+            });
+        });
+
+    </script>
 </body>
 </html>

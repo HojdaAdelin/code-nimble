@@ -24,6 +24,10 @@
                 
             </ul>
         </nav>
+        <button class="menu-toggle" aria-label="Toggle menu">
+            &#9776;
+        </button>
+        <button class="close-menu" aria-label="Close menu">&times;</button>
     </header>
 
     <!-- Download Section -->
@@ -43,22 +47,29 @@
             </div>
 
             <!-- More versions section -->
-            <div class="more-versions">
-                <p>More versions:</p>
-                <ul>
-                    <li>
-                        <a href="https://github.com/HojdaAdelin/CodeNimble/releases/download/2.0/CodeNimble.exe">v2.0 <img src="../img/windows.svg" alt="Windows Icon"></a>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <a href="https://github.com/HojdaAdelin/CodeNimble/releases/download/1.5/CodeNimble.exe">v1.5 <img src="../img/windows.svg" alt="Windows Icon"></a>
-                    </li>
-                    <li class="linux-info">
-                        <p>Linux: <span>Coming Soon</span></p>
-                    </li>
-                </ul>
+            <div class="version-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th><img src="../img/windows.svg" alt="Windows Icon"> Windows</th>
+                            <th><img src="../img/linux.png" alt="Linux Icon"> Linux</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="https://github.com/HojdaAdelin/CodeNimble/releases/download/2.2/CodeNimble.exe">v2.2</a></td>
+                            <td rowspan="3" class="linux-info">Coming Soon</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/HojdaAdelin/CodeNimble/releases/download/2.0/CodeNimble.exe">v2.0</a></td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://github.com/HojdaAdelin/CodeNimble/releases/download/1.5/CodeNimble.exe">v1.5</a></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
+            
         </div>
     </section>
 
@@ -89,6 +100,26 @@
             <p>&copy; 2024 Code Nimble. All Rights Reserved.</p>
         </div>
     </footer>
+    <script>
+        // Menu Toggle
+        document.addEventListener("DOMContentLoaded", function () {
+            const menuToggle = document.querySelector(".menu-toggle");
+            const navLinks = document.querySelector(".nav-links");
+            const closeMenu = document.querySelector(".close-menu");
 
+            // Afișează meniul și butonul de închidere când se apasă pe toggle
+            menuToggle.addEventListener("click", function () {
+                navLinks.classList.toggle("active");
+                closeMenu.classList.toggle("visible"); // Arată butonul close-menu
+            });
+
+            // Închide meniul și ascunde butonul de închidere
+            closeMenu.addEventListener("click", function () {
+                navLinks.classList.remove("active");
+                closeMenu.classList.remove("visible"); // Ascunde butonul close-menu
+            });
+        });
+
+    </script>
 </body>
 </html>

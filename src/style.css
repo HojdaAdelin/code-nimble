@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -292,6 +293,15 @@ footer {
     background-color: #222;
 }
 
+@media (min-width: 768px) { /* Ajustează lățimea minimă în funcție de nevoile tale */
+    .resources-section ~ footer,
+    .blogs-section ~ footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header.sticky {
@@ -393,18 +403,29 @@ footer {
     }
 
     .footer-links ul {
+        display: flex; /* Asigură-te că folosești flexbox */
         flex-direction: row-reverse;
-        justify-content: flex-end; /* Aliniază butoanele la dreapta */
+        justify-content: space-between; /* Spațiu uniform între elemente */
+        flex-wrap: wrap; /* Permite trecerea pe linii */
         width: 100%; /* Face nav-ul să ocupe întreaga lățime */
-        flex-wrap: wrap;
+        padding: 0; /* Elimină marginea internă */
     }
     .footer-links li {
-        margin: 10px;
+        flex: 1 1 30%; /* Permite elementelor să crească și să ocupe minimum 30% din lățime */
+        margin: 5px; /* Spațiu între elemente */
+        text-align: center; /* Center textul în fiecare element */
+    }
+    .footer-links a {
+        display: block; /* Asigură-te că linkurile sunt blocuri */
+        padding: 10px; /* Spațiu interior pentru linkuri */
+        border-radius: 5px; /* Colțuri rotunjite */
+        transition: background-color 0.3s; /* Efect de tranziție */
     }
 
     .footer-container {
+        display: flex; /* Asigură-te că folosești flexbox */
         justify-content: center;
-        flex-direction: row; 
+        flex-direction: column; /* Schimbă la coloană pentru o aliniere mai bună */
         flex-wrap: wrap;
         align-items: center;
     }
@@ -530,7 +551,6 @@ h2 {
 }
 
 .resources-section {
-    padding: 40px; /* Spațiu interior pentru secțiunea de resurse */
     background-color: #f9f9f9; /* Culoare de fundal deschisă */
     text-align: center; /* Centrarea textului */
     height: 100vh;

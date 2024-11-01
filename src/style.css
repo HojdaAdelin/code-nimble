@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -292,6 +293,15 @@ footer {
     background-color: #222;
 }
 
+@media (min-width: 768px) { /* Ajustează lățimea minimă în funcție de nevoile tale */
+    .resources-section ~ footer,
+    .blogs-section ~ footer {
+        position: sticky;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
     header.sticky {
@@ -530,7 +540,6 @@ h2 {
 }
 
 .resources-section {
-    padding: 40px; /* Spațiu interior pentru secțiunea de resurse */
     background-color: #f9f9f9; /* Culoare de fundal deschisă */
     text-align: center; /* Centrarea textului */
     height: 100vh;

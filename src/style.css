@@ -346,6 +346,34 @@ footer {
     .gallery-item {
         flex-basis: 100%;
     }
+    .version-table table, 
+    .version-table thead, 
+    .version-table tbody, 
+    .version-table th, 
+    .version-table td, 
+    .version-table tr {
+        display: block;
+        width: 100%;
+    }
+    
+    .version-table thead tr {
+        display: none;
+    }
+    
+    .version-table td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+    }
+    
+    .version-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 15px;
+        font-weight: bold;
+        color: #555;
+    }
 }
 
 
@@ -805,4 +833,50 @@ pre {
 
 .lightbox-overlay.show {
     display: flex; /* Show the overlay with flex for centering */
+}
+
+.version-table {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.version-table table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.version-table th,
+.version-table td {
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.version-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+.version-table img {
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 20px;
+    height: auto;
+}
+
+.version-table tbody td a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.version-table tbody td a:hover {
+    text-decoration: underline;
+}
+
+.version-table .linux-info {
+    font-style: italic;
+    color: #888;
 }

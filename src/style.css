@@ -57,10 +57,34 @@ header.sticky {
     background-color: #555;
     border-radius: 5px;
     transition: background-color 0.3s;
+    color: white;
+    text-decoration: none;
 }
 
 .nav-links a:hover {
     background-color: #777;
+}
+
+/* Butonul de meniu (hamburger) pentru mobil */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
 }
 
 /* Hero Section with Video Background */
@@ -270,10 +294,11 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    header.sticky {
+        position: relative;
+    }
     header {
-        justify-content: center;
-        flex-direction: row; 
-        flex-wrap: wrap; /* Permite elementelor să se împartă pe mai multe linii */
+        justify-content: space-between;
     }
     
     .doc-buttons .doc-btn {
@@ -310,11 +335,63 @@ footer {
     }
 
     .nav-links {
-        flex-direction: row-reverse;
-        justify-content: flex-end; /* Aliniază butoanele la dreapta */
-        width: 100%; /* Face nav-ul să ocupe întreaga lățime */
-        flex-wrap: wrap;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #333;
+        padding-top: 50px;
+        z-index: 999;
     }
+    .nav-links li {
+        margin: 20px 0;
+        text-align: left;
+    }
+    .nav-links a {
+        display: block;
+        padding: 15px 30px;
+        background-color: transparent;
+        font-size: 18px;
+        width: 100%;
+    }
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    .close-menu {
+        display: none;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 28px;
+        cursor: pointer;
+        z-index: 1001;
+    }
+    .close-menu.visible {
+        display: block;
+    }
+    .nav-links.active ~ .close-menu {
+        display: block;
+    }
+
+    /* Când meniul este activ */
+    .nav-links.active {
+        display: flex;
+    }
+    .logo {
+        margin-right: auto; /* Logo-ul să rămână la stânga */
+    }
+
     .footer-links ul {
         flex-direction: row-reverse;
         justify-content: flex-end; /* Aliniază butoanele la dreapta */
@@ -323,9 +400,6 @@ footer {
     }
     .footer-links li {
         margin: 10px;
-    }
-    .nav-links li {
-        margin: 10px; /* Spațiu între butoane pe verticală și orizontală */
     }
 
     .footer-container {

@@ -300,6 +300,7 @@ footer {
         bottom: 0;
         width: 100%;
     }
+    
 }
 
 /* Media Queries for Responsiveness */
@@ -483,6 +484,15 @@ footer {
         flex: 1; /* Ocupă restul spațiului */
         width: 100%; /* Lățime completă */
     }
+    pre {
+        font-size: 0.9em; /* Micșorăm dimensiunea fontului */
+        padding: 10px; /* Reducem paddingul */
+        border-radius: 6px; /* Reducem colțurile rotunjite */
+        margin: 15px 0; /* Margini mai compacte */
+        white-space: pre-wrap; /* Spargem textul pe mai multe linii */
+        word-break: break-word; /* Spargem cuvintele lungi */
+    }
+    
 }
 
 .download-section {
@@ -615,7 +625,7 @@ h2 {
 }
 
 .docs-section {
-    height: calc(100vh - 200px);
+    
     display: flex;
     flex-direction: column; /* Organizare pe verticală pe ecrane mici */
     margin: 0 auto;
@@ -678,6 +688,42 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
 }
+
+code {
+    background-color: #f4f4f6; /* Fundal deschis pentru contrast */
+    color: #e83e8c; /* Culoare vibrantă pentru text */
+    font-family: 'Fira Code', monospace; /* Font popular pentru cod */
+    font-size: 0.95em; /* Dimensiune puțin redusă pentru spațiu compact */
+    padding: 2px 6px; /* Spațiu interior */
+    border-radius: 4px; /* Colțuri rotunjite */
+    border: 1px solid #ddd; /* Linie subtilă */
+}
+
+pre {
+    background-color: #2d2d2d; /* Fundal întunecat pentru contrast */
+    color: #f8f8f2; /* Text deschis pe fundal închis */
+    font-family: 'Fira Code', monospace; /* Font consistent cu <code> */
+    font-size: 1em; /* Dimensiune standard */
+    padding: 15px; /* Spațiu interior generos */
+    border-radius: 8px; /* Colțuri rotunjite */
+    overflow-x: auto; /* Permite derularea orizontală */
+    line-height: 1.5; /* Spațiere între linii pentru lizibilitate */
+    margin: 20px 0; /* Spațiu între blocuri */
+    border: 1px solid #444; /* Linie subtilă pentru delimitare */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+}
+
+/* Evidențierea sintaxei */
+pre code {
+    color: inherit; /* Păstrează culoarea din <pre> */
+}
+
+/* Opțional: Scroll vizibil doar pe mouse hover */
+pre:hover {
+    scrollbar-color: #888 #2d2d2d; /* Culoare pentru bara de derulare */
+    scrollbar-width: thin; /* Bara subțire */
+}
+
 
 .doc-section {
     flex: 1;

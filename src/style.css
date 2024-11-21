@@ -300,6 +300,7 @@ footer {
         bottom: 0;
         width: 100%;
     }
+    
 }
 
 /* Media Queries for Responsiveness */
@@ -469,8 +470,30 @@ footer {
         font-weight: bold;
         color: #555;
     }
-}
+    .docs-container {
+        flex-direction: column; /* Organizare verticală */
+    }
 
+    .docs-sidebar {
+        top: auto; /* Resetare */
+        flex: 1; /* Ocupă spațiu egal cu conținutul */
+        width: 100%; /* Lățime completă */
+    }
+
+    .docs-content {
+        flex: 1; /* Ocupă restul spațiului */
+        width: 100%; /* Lățime completă */
+    }
+    pre {
+        font-size: 0.9em; /* Micșorăm dimensiunea fontului */
+        padding: 10px; /* Reducem paddingul */
+        border-radius: 6px; /* Reducem colțurile rotunjite */
+        margin: 15px 0; /* Margini mai compacte */
+        white-space: pre-wrap; /* Spargem textul pe mai multe linii */
+        word-break: break-word; /* Spargem cuvintele lungi */
+    }
+    
+}
 
 .download-section {
     padding: 20px;
@@ -602,77 +625,157 @@ h2 {
 }
 
 .docs-section {
-    display: flex; /* Aranjează conținutul în linii */
-    margin: 20px;
-    height: 100vh;
-    background-color: #f9f9f9; /* Fundal deschis */
+    
+    display: flex;
+    flex-direction: column; /* Organizare pe verticală pe ecrane mici */
+    margin: 0 auto;
+    max-width: 1200px; /* Lățime maximă */
+    padding: 20px;
+    background-color: #f4f4f4; /* Fundal */
+    gap: 20px;
 }
 
 .docs-container {
-    display: flex; /* Flex pentru a organiza bara laterală și conținutul */
-    width: 100%; /* Asigură că containerul ocupă întreaga lățime */
+    display: flex;
+    flex-wrap: wrap; /* Flexibilitate pe ecrane mici */
+    gap: 20px;
 }
 
 .docs-sidebar {
-    width: 250px; /* Lățimea barei laterale */
-    padding: 20px; /* Spațiu interior */
-    background-color: #fff; /* Fundal alb pentru bara laterală */
-    border-right: 1px solid #ddd; /* Linia separatoare */
-    position: sticky; /* Rămâne lipită la marginea ecranului */
-    top: 0; /* Se aliniază la marginea superioară a ferestrei */
+    flex: 1; /* Ocupă spațiu egal pe dispozitive mici */
+    max-width: 100%; /* Se ajustează pe ecrane mici */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 20px;
+    transition: all 0.3s ease; /* Tranziție pentru o experiență fluidă */
 }
 
 .docs-sidebar h2 {
-    font-size: 1.5em; /* Dimensiunea titlului */
-    margin-bottom: 20px; /* Spațiu sub titlu */
+    font-size: 1.5em;
+    margin-bottom: 20px;
 }
 
 .docs-sidebar ul {
-    list-style-type: none; /* Elimină marcajele pentru liste */
-    padding: 0; /* Elimină marginea internă */
+    list-style: none;
+    padding: 0;
 }
 
 .docs-sidebar li {
-    margin: 10px 0; /* Spațiu între elementele listei */
+    margin: 15px 0;
 }
 
 .docs-sidebar a {
-    text-decoration: none; /* Elimină sublinierea */
-    color: #007bff; /* Culoarea link-urilor */
-    transition: color 0.3s; /* Efect de tranziție pentru hover */
+    text-decoration: none;
+    font-weight: 500;
+    color: #007bff;
+    padding: 10px;
+    display: block;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.docs-sidebar a:hover {
-    color: #0056b3; /* Culoare mai închisă la hover */
+.docs-sidebar a:hover,
+.docs-sidebar a.active {
+    background-color: #007bff;
+    color: #ffffff;
 }
 
 .docs-content {
-    flex: 1; /* Permite conținutului principal să se extindă */
-    padding: 20px; /* Spațiu interior */
+    flex: 3; /* Conținutul principal să ocupe mai mult spațiu */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.doc-section {
-    display: none; /* Ascunde secțiunile până la activare */
-}
-
-.doc-section.active {
-    display: block; /* Afișează secțiunea activă */
-}
-
-.doc-section h2 {
-    font-size: 2em; /* Dimensiunea titlului secțiunii */
-    margin-bottom: 10px; /* Spațiu sub titlu */
-}
-
-.doc-section p {
-    margin-bottom: 15px; /* Spațiu sub paragrafe */
+code {
+    background-color: #f4f4f6; /* Fundal deschis pentru contrast */
+    color: #e83e8c; /* Culoare vibrantă pentru text */
+    font-family: 'Fira Code', monospace; /* Font popular pentru cod */
+    font-size: 0.95em; /* Dimensiune puțin redusă pentru spațiu compact */
+    padding: 2px 6px; /* Spațiu interior */
+    border-radius: 4px; /* Colțuri rotunjite */
+    border: 1px solid #ddd; /* Linie subtilă */
 }
 
 pre {
-    background-color: #f1f1f1; /* Fundal deschis pentru cod */
-    padding: 15px; /* Spațiu interior */
-    border-radius: 5px; /* Colțuri rotunjite */
+    background-color: #2d2d2d; /* Fundal întunecat pentru contrast */
+    color: #f8f8f2; /* Text deschis pe fundal închis */
+    font-family: 'Fira Code', monospace; /* Font consistent cu <code> */
+    font-size: 1em; /* Dimensiune standard */
+    padding: 15px; /* Spațiu interior generos */
+    border-radius: 8px; /* Colțuri rotunjite */
     overflow-x: auto; /* Permite derularea orizontală */
+    line-height: 1.5; /* Spațiere între linii pentru lizibilitate */
+    margin: 20px 0; /* Spațiu între blocuri */
+    border: 1px solid #444; /* Linie subtilă pentru delimitare */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+}
+
+/* Evidențierea sintaxei */
+pre code {
+    color: inherit; /* Păstrează culoarea din <pre> */
+}
+
+/* Opțional: Scroll vizibil doar pe mouse hover */
+pre:hover {
+    scrollbar-color: #888 #2d2d2d; /* Culoare pentru bara de derulare */
+    scrollbar-width: thin; /* Bara subțire */
+}
+
+
+.doc-section {
+    flex: 1;
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.doc-section.active {
+    display: block;
+}
+
+.doc-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.4s ease-in-out;
+}
+
+.doc-card h2 {
+    font-size: 1.8em;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.doc-card ul {
+    margin-left: 20px;
+}
+
+.doc-card ul li {
+    margin-bottom: 10px;
+}
+
+/* Animații */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .blogs-section {

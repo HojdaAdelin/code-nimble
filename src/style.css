@@ -55,7 +55,6 @@ header.sticky {
 
 .nav-links a {
     padding: 10px 20px;
-    background-color: #555;
     border-radius: 5px;
     transition: background-color 0.3s;
     color: white;
@@ -268,7 +267,6 @@ footer {
 .footer-links a {
     color: white;
     padding: 10px;
-    background-color: #555;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
